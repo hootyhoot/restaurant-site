@@ -1,0 +1,86 @@
+.MenuPanel{
+    background-color: #04AA6D;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.MenuPanel .leftAlign{
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.MenuPanel .rightAlign{
+    color: white;
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+
+.MenuPanel .Dropdown{
+    position: relative;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+.MenuPanel a:hover{
+    background-color: #3e8e41;
+}
+
+.MenuPanel .Dropdown:hover{
+    background-color: #3e8e41;
+}
+
+.MenuPanel .Dropdown:hover .MenuDropdownBtn{
+    background-color: #3e8e41;
+}
+
+
+
+.MenuDropdownBtn {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+.MenuDropdownContent{
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 46px;
+    background-color: #04AA6D;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.MenuPanel .MenuDropdownContent a{
+    color: black;
+    padding: 11.5px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.MenuDropdownContent a:hover {background-color: #ddd;}
+.Dropdown:hover .MenuDropdownContent {display: block;}
+
+
