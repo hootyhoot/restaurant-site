@@ -1,86 +1,196 @@
+
+:root{
+    --themeColor: #04AA6D;
+    --themeButtonHover: #3e8e41;
+}
+
+/*--------------------------------------------*/
+/* For loginPage */
+
+.Login{
+
+    position: relative;
+
+    /* Title of the login page */
+    h2{
+        padding-top: 10%;
+        text-align: center;
+        color: black;
+    }
+}
+
+
+.loginForm{
+    position: relative;
+    background-color: white;
+    margin: auto;
+    width: 35%;
+    padding: 20px;
+
+
+
+    .formField{
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .formLabel{
+            display: block;
+            padding-bottom: 5px;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        .formInput{
+            height: 20px;
+            width: 100%;
+        }
+    }
+
+
+
+    .formButton{
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: var(--themeColor);
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 101%;
+        text-decoration: none;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .registerButton{
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: var(--themeColor);
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: 97%;
+        text-decoration: none;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    
+}
+
+
+
+
+
+/*--------------------------------------------*/
+/* For homePage */
+
+
+
+/* For MenuPanel */
 .MenuPanel{
-    background-color: #04AA6D;
+
+    /* General design of MenuPanel */
+    background-color: var(--themeColor);
     position: relative;
     display: inline-block;
     width: 100%;
+
+
+    /* Design for buttons with leftAlign class */
+    .leftAlign{
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+
+    /* Design for buttons with rightAlign class */
+    .rightAlign{
+        color: white;
+        float: right;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    /* Design for buttons with Dropdown class */
+    .Dropdown{
+        position: relative;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 16px;
+
+
+        /* Design for elements of the dropped down items */
+        .MenuDropdownContent{
+            display: none;
+            position: absolute;
+            left: 0px;
+            top: 46px;
+            background-color: var(--themeColor);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            
+            /* Text design for the elements of the dropped down items */
+            a{
+                color: black;
+                padding: 11.5px 15px;
+                text-decoration: none;
+                display: block;
+            }
+
+            a:hover {background-color: #ddd;}
+        
+        }
+    }
+
+
+    /* Hover effect for all the menuPanel main buttons */
+    a:hover{
+        background-color: var(--themeButtonHover);
+    }
+
+
+    /* Hover effect for the dropdown buttons in menuPanel */
+    .Dropdown:hover{
+        background-color: var(--themeButtonHover);
+        .MenuDropdownContent {display: block;}
+    }
+
+
 }
 
 
-.MenuPanel .leftAlign{
-    color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.MenuPanel .rightAlign{
-    color: white;
-    float: right;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-
-.MenuPanel .Dropdown{
-    position: relative;
-    color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 16px;
-}
-
-.MenuPanel a:hover{
-    background-color: #3e8e41;
-}
-
-.MenuPanel .Dropdown:hover{
-    background-color: #3e8e41;
-}
-
-.MenuPanel .Dropdown:hover .MenuDropdownBtn{
-    background-color: #3e8e41;
-}
 
 
 
-.MenuDropdownBtn {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    font-size: 15px;
-}
 
 
-.MenuDropdownContent{
-    display: none;
-    position: absolute;
-    left: 0px;
-    top: 46px;
-    background-color: #04AA6D;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
 
-.MenuPanel .MenuDropdownContent a{
-    color: black;
-    padding: 11.5px 15px;
-    text-decoration: none;
-    display: block;
-}
 
-.MenuDropdownContent a:hover {background-color: #ddd;}
-.Dropdown:hover .MenuDropdownContent {display: block;}
+
+
+
+
 
 
