@@ -7,37 +7,36 @@
 
 </head>
 
-<body style="background-color: rgb(240, 240, 240);">
+<body style="background-color: black;">
 
 
     <div class="Login">
         
         <h2>USER LOGIN</h2>
     
-    </div>
+    
+
+        <div class="loginForm">
+
+            <form action="/login_page.php">
+                
+                <div class="formField">
+                    <label class="formLabel" for="username">Username</label>
+                    <input class="formInput" type="text" id="username" name="username">
+                </div>
+                
+                <div class="formField">
+                    <label class="formLabel" for="password">Password</label>
+                    <input class="formInput" type="password" id="password" name="password">
+                </div>
+
+                <input class="formButton" type="submit" value="Login">
+                
+                <a class="registerButton" href="registerPage.html">Register</a>
+            </form>
         
 
-
-    <div class="loginForm">
-
-        <form action="/login_page.php">
-            
-            <div class="formField">
-                <label class="formLabel" for="username">Username</label>
-                <input class="formInput" type="text" id="username" name="username">
-            </div>
-            
-            <div class="formField">
-                <label class="formLabel" for="password">Password</label>
-                <input class="formInput" type="password" id="password" name="password">
-            </div>
-
-            <input class="formButton" type="submit" value="Login">
-            
-            <a class="registerButton" href="#">Register</a>
-        </form>
-
-        
+        </div>
 
     </div>
     

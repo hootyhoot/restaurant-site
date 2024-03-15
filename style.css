@@ -10,79 +10,97 @@
 .Login{
 
     position: relative;
+    color: black;
+    text-align: center;
+    padding-top: 10%;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
 
-    /* Title of the login page */
     h2{
-        padding-top: 10%;
-        text-align: center;
-        color: black;
-    }
-}
-
-
-.loginForm{
-    position: relative;
-    background-color: white;
-    margin: auto;
-    width: 35%;
-    padding: 20px;
-
-
-
-    .formField{
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-        .formLabel{
-            display: block;
-            padding-bottom: 5px;
-            font-weight: bold;
-            font-size: medium;
-        }
-
-        .formInput{
-            height: 20px;
-            width: 100%;
-        }
+        color: white;  
     }
 
-
-
-    .formButton{
+    .loginForm{
         position: relative;
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 10px;
-        background-color: var(--themeColor);
-        color: white;
-        border: none;
-        cursor: pointer;
-        width: 101%;
-        text-decoration: none;
-        text-align: center;
-        font-size: 15px;
-    }
-
-    .registerButton{
-        position: relative;
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 10px;
-        background-color: var(--themeColor);
-        color: white;
-        border: none;
-        cursor: pointer;
-        width: 97%;
-        text-decoration: none;
-        text-align: center;
-        font-size: 15px;
-    }
-
+        background-color: white;
+        margin: auto;
+        width: 35%;
+        padding: 25px;
     
+    
+    
+        .formField{
+            
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin: none;
+            display: block;
+            text-align: left;
+    
+            .formLabel{
+                
+                padding-bottom: 5px;
+                font-weight: bold;
+                font-size: medium;
+            }
+    
+            .formInput{
+                padding-right: 0;
+                padding-left: 5px;
+                height: 30px;
+                width: 100%;
+                font-size: 15px;
+            }
+        }
+    
+    
+    
+        .formButton{
+            margin-top: 10px;
+            padding: 10px;
+            background-color: var(--themeColor);
+            color: white;
+            cursor: pointer;
+            width: 101.5%;
+            border: none;
+            text-decoration: none;
+            text-align: center;
+            font-size: 15px;
+        }
+    
+        .registerButton{
+            position: relative;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: var(--themeColor);
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 97.7%;
+            text-decoration: none;
+            text-align: center;
+            font-size: 15px;
+        }
+    
+        
+    }
 }
+
+
+
+
+
+/*--------------------------------------------*/
+/* For registerPage */
+
+
+
+
 
 
 
