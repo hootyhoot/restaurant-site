@@ -8,17 +8,17 @@
 </head>
 
 <body style="background-color: black;">
-
-
+    <?php session_start(); ?>
+    
     <div class="Login">
         
         <h2>USER LOGIN</h2>
-    
+        
     
 
         <div class="loginForm">
 
-            <form action="/login_page.php">
+            <form action="loginVerify.php" method="post">
                 
                 <div class="formField">
                     <label class="formLabel" for="username">Username</label>
@@ -34,7 +34,13 @@
                 
                 <a class="registerButton" href="registerPage.html">Register</a>
             </form>
-        
+            
+            <?php
+                if($_SESSION["error"] == "true"){
+                    echo "<h3 style=\"color:red\">Invalid Username or Password</h3>";
+                    session_destroy();
+                }
+            ?>
 
         </div>
 
