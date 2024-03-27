@@ -32,13 +32,13 @@
 
                 <input class="formButton" type="submit" value="Login">
                 
-                <a class="registerButton" href="registerPage.html">Register</a>
+                <a class="registerButton" href="registerPage.php">Register</a>
             </form>
             
             <?php
                 if($_SESSION["error"] == "true"){
                     echo "<h3 style=\"color:red\">Invalid Username or Password</h3>";
-                    session_destroy();
+                    $_SESSION["error"] = "false";
                 }
             ?>
 
