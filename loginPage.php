@@ -36,9 +36,9 @@
             </form>
             
             <?php
-                if($_SESSION["error"] == "true"){
+                if($_SESSION["loginError"] == "true"){
                     echo "<h3 style=\"color:red\">Invalid Username or Password</h3>";
-                    $_SESSION["error"] = "false";
+                    $_SESSION["loginError"] = "false";
                 }
             ?>
 

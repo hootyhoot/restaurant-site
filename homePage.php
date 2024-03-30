@@ -8,6 +8,8 @@
 
 <body>
 
+    <?php session_start(); ?>
+
     <div id="menu" class="MenuPanel">
         <a class="leftAlign" href="homePage.html">Home</a>
 
@@ -19,9 +21,16 @@
                 <a href="insert link">Desserts</a>
             </div>
         </div>
+
+        <?php
+            if ($_SESSION["userType"] == "Admin"){
+                echo "<a class=\"leftAlign\" href=\"addFoodPage.php\">Add Food</a>";
+            }
         
+        ?>
         
-        <a class="rightAlign" href="#">Logout</a>
+        <a class="rightAlign" href="logoutCleanup.php">Logout</a>
+        <a class="rightAlign" href="editProfilePage.php">Profile</a>
         <a class="rightAlign" href="#">Cart</a>
 
     </div>
