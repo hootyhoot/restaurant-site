@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    ####
+    <!-- Test -->
     <?php session_start(); ?>
 
     <div id="menu" class="MenuPanel">
