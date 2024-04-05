@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS Food(
     FoodName VARCHAR(50) NOT NULL,
     Price DECIMAL(6,2) NOT NULL,
     Availability ENUM('Available', 'Not Available') NOT NULL,
-    FoodPic BLOB NOT NULL,
+    FoodPic LONGBLOB NOT NULL,
     Description VARCHAR(255),
     CategoryID INT,
     FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID) ON UPDATE CASCADE ON DELETE CASCADE
