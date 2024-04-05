@@ -12,7 +12,7 @@
 4.      Page for the 3 food categories
 
 
-5.      Page to add new food into menu
+5.      Page to add new food into menu (working on it - WJ)
 
 
 6.      Cart page
@@ -21,7 +21,8 @@
 7.      Payment page
 
 
-8.      Admin function to change food order status
+8.      Admin function to change food order status [REMOVE]
+        --to remove from ERD also
 
 
 9.      Page to amend user's profile information (this is part of the requirement)
