@@ -1,5 +1,6 @@
 <?php
 
+    //defining all the constants for the fields in the form
     define("FIRST_NAME_FIELD", "firstName");
     define("LAST_NAME_FIELD", "lastName");
     define("EMAIL_FIELD", "email");
