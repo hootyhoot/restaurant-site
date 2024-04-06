@@ -11,7 +11,7 @@
     <?php session_start(); ?>
 
     <div id="menu" class="MenuPanel">
-        <a class="leftAlign" href="homePage.html">Home</a>
+        <a class="leftAlign" href="homePage.php">Home</a>
 
         <div class="Dropdown">
             Browse
