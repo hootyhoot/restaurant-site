@@ -9,14 +9,15 @@
         --thinking probably our home page will just be a cover photo at the top, then one row to display several featured foods
         the featured foods can be edited and changed by admin. We can limit the max number of featured foods to show (like maybe 5)
 
-4.      Page for the 3 food categories [working on it - WJ]
+4.      Page for the 3 food categories [DONE]
+4.1     Specific page once the User clicks into the specific food (link to this page has been done), just need the design
 
 
 5.      Page to add new food into menu [DONE]
 5.1     HTML & CSS for addFoodPage
 
 
-6.      Cart page
+6.      Cart page [working on it - WJ]
 
 
 7.      Payment page

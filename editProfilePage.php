@@ -6,6 +6,9 @@
 
 </head>
 <body>
+
+    <?php include "navigationPanel.php"; ?>
+
     <div><h1>This page is for users to edit their information.</h1></div>
     
 </body>
