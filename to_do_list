@@ -1,16 +1,19 @@
 1.      Login page [DONE]
 1.1     Login credentials verification [DONE]
 
+
 2.      Registration page [DONE]
 2.1     Registration existing user check and verification [DONE]
+
 
 3.      Home Page design
 3.1     Admin function to show / remove featured foods (just a proposal)
         --thinking probably our home page will just be a cover photo at the top, then one row to display several featured foods
         the featured foods can be edited and changed by admin. We can limit the max number of featured foods to show (like maybe 5)
 
+
 4.      Page for the 3 food categories [DONE]
-4.1     Specific page once the User clicks into the specific food (link to this page has been done), just need the design
+4.1     Specific page once the User clicks into the specific food (link to this page has been done), just need the design [working on it - WJ]
 
 
 5.      Page to add new food into menu [DONE]
