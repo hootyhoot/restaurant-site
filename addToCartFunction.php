@@ -15,8 +15,16 @@
         die("Connection failed: " . $conn -> connect_error);
     }
 
-    $conn -> query("INSERT INTO Cart (UserID, FoodID, Quantity) VALUES (" . $_SESSION["userID"] . ", " . FOOD_ID . ", " . QUANTITY . ")" );
+    $result = $conn -> query("SELECT CartID FROM Cart WHERE UserID = '" . $_SESSION["userID"] . "' AND FoodID = '" . FOOD_ID . "'");
 
+    if($result -> num_rows > 0){
+        $row = $result -> fetch_assoc();
+        $conn -> query("UPDATE Cart SET Quantity = Quantity + " . QUANTITY . " WHERE CartID = " . $row["CartID"]);
+    }
+    else{
+        $conn -> query("INSERT INTO Cart (UserID, FoodID, Quantity) VALUES (" . $_SESSION["userID"] . ", " . FOOD_ID . ", " . QUANTITY . ")" );
+    }
+    
     $_SESSION["addedToCart"] = "true";
 
     header("Location: specificFoodPage.php?foodID=" . FOOD_ID);

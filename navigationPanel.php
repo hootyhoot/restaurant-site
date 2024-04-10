@@ -12,7 +12,8 @@
 
     <?php
         if ($_SESSION["userType"] == "Admin"){
-            echo "<a class=\"leftAlign\" href=\"addFoodPage.php\">Add Food</a>";
+            echo "<a class='leftAlign' href='addFoodPage.php'>Add Food</a>";
+            echo "<a class='leftAlign' href='featuredFoodPage.php'>Featured Foods</a>";
         }
     ?>
     

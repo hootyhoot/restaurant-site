@@ -97,18 +97,19 @@
 
         <div class="currentFoodRecords">
                
+                <h1>Current Food Records</h1>
 
                 <table class="foodRecordTable">
                     
                     <div class="tableHeader">
                         <tr>
                             <th>FoodID</th>
-                            <th>FoodName</th>
+                            <th>Food Name</th>
                             <th>Price</th>
                             <th>Availability</th>
-                            <th>FoodPic</th>
+                            <th>Food Picture</th>
                             <th>Description</th>
-                            <th>CategoryID</th>
+                            <th>Category Name</th>
                             <th>Delete</th>
 
                         </tr>
@@ -141,7 +142,7 @@
                                 echo"</div>";
 
                                 echo"<td style='font-size: 12px;'>"; echo $row[5]; echo"</td>";
-                                echo "<td>"; echo $row[6]; echo "</td>";
+                                echo "<td>"; echo $row[7]; echo "</td>";
 
                                 echo "<td>"; echo "<a href='deleteFoodFunction.php?FoodID=".$row[0]; echo "'>Delete</a>"; echo "</td>";
 

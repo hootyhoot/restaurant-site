@@ -7,7 +7,7 @@
 
 
 3.      Home Page design
-3.1     Admin function to show / remove featured foods (just a proposal)
+3.1     Admin function to show / remove featured foods (just a proposal) (link to page already created)
         --thinking probably our home page will just be a cover photo at the top, then one row to display several featured foods
         the featured foods can be edited and changed by admin. We can limit the max number of featured foods to show (like maybe 5)
 
@@ -22,17 +22,18 @@
 5.1     HTML & CSS for addFoodPage
 
 
-6.      Cart page [working on it - WJ]
+6.      Cart page [DONE]
+6.1     JavaScript for 'modify cart quantity function' - the idea is to not want any submit button to update the table, we will add a 'number type input' and run a php/javascript to update the table if user clicked on the button AND hovered away from the input
 
 
 7.      Payment page
 
 
 8.      Admin function to change food order status [REMOVED]
-        --to remove from ERD also
+        --Removed from ERD also
 
 
-9.      Page to amend user's profile information (this is part of the requirement)
+9.      Page to amend user's profile information (this is part of the requirement) [WORKING ON IT - WJ]
         --need a function for user to probably change their name, number etc.
 
 
