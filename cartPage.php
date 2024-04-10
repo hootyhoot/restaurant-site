@@ -12,7 +12,7 @@
         include "navigationPanel.php";
     ?>
 
-    <div><h1>This page is for users to edit their information.</h1></div>
+    <div><h1>Cart Page</h1></div>
     
 </body>
 </html>

@@ -13,7 +13,9 @@
 
 
 4.      Page for the 3 food categories [DONE]
-4.1     Specific page once the User clicks into the specific food (link to this page has been done), just need the design [working on it - WJ]
+4.1     Specific page once the User clicks into the specific food [DONE]
+4.2     CSS for foodCategoryPage.php
+4.3     CSS for specificFoodPage.php
 
 
 5.      Page to add new food into menu [DONE]
@@ -26,7 +28,7 @@
 7.      Payment page
 
 
-8.      Admin function to change food order status [REMOVE]
+8.      Admin function to change food order status [REMOVED]
         --to remove from ERD also
 
 

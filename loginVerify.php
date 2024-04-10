@@ -17,7 +17,7 @@
     $formUsername = $_POST["username"];
     $formPassword = $_POST["password"];
 
-    $sql = "SELECT Password, UserType FROM User WHERE Username = '" . $formUsername . "'";
+    $sql = "SELECT UserID, Password, UserType FROM User WHERE Username = '" . $formUsername . "'";
 
 
     
@@ -26,6 +26,7 @@
     if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
             if($row["Password"] == $formPassword){
+                $_SESSION["userID"] = $row["UserID"];
                 $_SESSION["userType"] = $row["UserType"];
                 header("Location: homePage.php");
             } else {
