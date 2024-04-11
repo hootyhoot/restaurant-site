@@ -19,6 +19,7 @@
     
     <a class="rightAlign" href="logoutCleanup.php">Logout</a>
     <a class="rightAlign" href="editProfilePage.php">Profile</a>
+    <a class="rightAlign" href="orderPage.php">Orders</a>
     <a class="rightAlign" href="cartPage.php">Cart</a>
 
 </div>

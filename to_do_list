@@ -6,7 +6,7 @@
 2.1     Registration existing user check and verification [DONE]
 
 
-3.      Home Page design
+3.      CSS for homePage.php and design (what to display in home page? current idea is featured foods which is highlighted in 3.1)
 3.1     Admin function to show / remove featured foods (just a proposal) (link to page already created)
         --thinking probably our home page will just be a cover photo at the top, then one row to display several featured foods
         the featured foods can be edited and changed by admin. We can limit the max number of featured foods to show (like maybe 5)
@@ -26,15 +26,19 @@
 6.1     JavaScript for 'modify cart quantity function' - the idea is to not want any submit button to update the table, we will add a 'number type input' and run a php/javascript to update the table if user clicked on the button AND hovered away from the input
 
 
-7.      Payment page
+7.      Payment page [WORKING ON IT - WJ]
 
 
-8.      Admin function to change food order status [REMOVED]
+8.      Order Page (a page for user to review all their orders) [not really mandatory but seems foolish to not have it]
+
+
+9.      Admin function to change food order status [REMOVED]
         --Removed from ERD also
 
 
-9.      Page to amend user's profile information (this is part of the requirement) [WORKING ON IT - WJ]
+10.      Page to amend user's profile information (this is part of the requirement) [DONE]
         --need a function for user to probably change their name, number etc.
+10.1     CSS for updateProfilePage.php
 
 
-9.      Logout [DONE]
+11.      Logout [DONE]
