@@ -15,7 +15,7 @@
 
 
     <div class="mainImageContainer">
-            <img src="homePage.jpg" alt="Home Page Food">
+            <img src="default images/homePage.jpg" alt="Home Page Food">
             <h1>Welcome to our restaurant!</h1>
     </div>
     
