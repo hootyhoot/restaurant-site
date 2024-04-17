@@ -60,6 +60,8 @@
                 echo "<td style='text-align:right'>" . number_format($grandTotal,2) . "</td> </tr>";
 
             echo "</table>";
+
+            echo "<a href='checkoutPage.php'>Checkout</a>";
         }
         else{
             echo "<div><p>Your cart is empty</p></div>";

@@ -4,6 +4,7 @@
 
 2.      Registration page [DONE]
 2.1     Registration existing user check and verification [DONE]
+2.2     Have to add more form validation e.g. for email
 
 
 3.      CSS for homePage.php and design (what to display in home page? current idea is featured foods which is highlighted in 3.1)
@@ -20,13 +21,14 @@
 
 5.      Page to add new food into menu [DONE]
 5.1     HTML & CSS for addFoodPage
+5.2     Need function to amend food attributes e.g. name/price/availability (in this function, after amending, need to remove the food from cart table if it is set to unavailable)
 
 
 6.      Cart page [DONE]
-6.1     JavaScript for 'modify cart quantity function' - the idea is to not want any submit button to update the table, we will add a 'number type input' and run a php/javascript to update the table if user clicked on the button AND hovered away from the input
+6.1     [COMPULSORY] JavaScript for 'modify cart quantity function' - the idea is to not want any submit button to update the table, we will add a 'number type input' and run a php/javascript to update the table if user clicked on the button AND hovered away from the input
 
 
-7.      Payment page [WORKING ON IT - WJ]
+7.      Payment page [DONE]
 
 
 8.      Order Page (a page for user to review all their orders) [not really mandatory but seems foolish to not have it]

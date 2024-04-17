@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS Payment(
     PaymentID INT AUTO_INCREMENT PRIMARY KEY,
     PaymentType ENUM('Credit Card', 'Touch N Go') NOT NULL,
     Amount DECIMAL(10,2) NOT NULL,
-    PaymentDate DATE NOT NULL
+    PaymentDate DATETIME NOT NULL
 );
 
 

@@ -50,7 +50,7 @@
 
                 <div class="formField">
                     <label class="formLabel" for="contactNum">Contact Number</label>
-                    <input class="formInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="11" placeholder="without '-'">
+                    <input class="formInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="10" pattern="[0-9]{10}" title="0121112222" placeholder="without '-'">
                 </div>
 
                 <input class="formButton" type="submit" value="Register Now">
