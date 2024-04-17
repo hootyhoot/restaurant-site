@@ -31,7 +31,7 @@
 7.      Payment page [DONE]
 
 
-8.      Order Page (a page for user to review all their orders) [not really mandatory but seems foolish to not have it]
+8.      Order Page (a page for user to review all their orders) [WORKING ON IT - WJ]
 
 
 9.      Admin function to change food order status [REMOVED]
@@ -44,3 +44,11 @@
 
 
 11.      Logout [DONE]
+
+
+
+
+FINAL CHECKS TO DO BEFORE SUBMISSION
+
+1. Match ERD with SQL database
+2. Ensure all form verifications are in place (check the validation logic)
