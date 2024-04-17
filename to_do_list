@@ -20,8 +20,8 @@
 
 
 5.      Page to add new food into menu [DONE]
-5.1     HTML & CSS for addFoodPage
-5.2     Need function to amend food attributes e.g. name/price/availability (in this function, after amending, need to remove the food from cart table if it is set to unavailable)
+5.1     CSS for addFoodPage
+5.2     Need function to modify food attributes e.g. name/price/availability (in this function, after amending, need to remove the food from cart table if it is set to unavailable)
 
 
 6.      Cart page [DONE]
@@ -34,16 +34,19 @@
 8.      Order Page (a page for user to review all their orders) [WORKING ON IT - WJ]
 
 
-9.      Admin function to change food order status [REMOVED]
+9.      CSS for Receipt page (the page after payment is done, just to inform user payment successful and food is on the way)
+
+
+10.      Admin function to change food order status [REMOVED]
         --Removed from ERD also
 
 
-10.      Page to amend user's profile information (this is part of the requirement) [DONE]
+11.      Page to amend user's profile information (this is part of the requirement) [DONE]
         --need a function for user to probably change their name, number etc.
-10.1     CSS for updateProfilePage.php
+11.1     CSS for updateProfilePage.php
 
 
-11.      Logout [DONE]
+12.      Logout [DONE]
 
 
 
