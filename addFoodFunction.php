@@ -28,11 +28,10 @@
     $formFoodPrice = $_POST[FOOD_PRICE_FIELD];
     $formFoodAvailability = $_POST[FOOD_AVAILABILITY_FIELD];
     $formFoodDescription = $_POST[FOOD_DESCRIPTION_FIELD];
-    $formFoodPic = file_get_contents($_FILES[FOOD_PIC_FIELD]['tmp_name']);
     $formFoodPicType = $_FILES[FOOD_PIC_FIELD]['type'];
     $null = NULL;
 
-    if($formFoodPicType != "image/jpeg"){
+    if($formFoodPicType != "image/jpeg" || !($formFoodPic = file_get_contents($_FILES[FOOD_PIC_FIELD]['tmp_name'])) ){
         $_SESSION["foodUploadError"] = "imageTypeError";
         header("Location: addFoodPage.php");
     }
