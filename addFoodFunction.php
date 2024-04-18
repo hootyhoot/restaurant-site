@@ -29,7 +29,6 @@
     $formFoodAvailability = $_POST[FOOD_AVAILABILITY_FIELD];
     $formFoodDescription = $_POST[FOOD_DESCRIPTION_FIELD];
     $formFoodPicType = $_FILES[FOOD_PIC_FIELD]['type'];
-    $null = NULL;
 
     if($formFoodPicType != "image/jpeg" || !($formFoodPic = file_get_contents($_FILES[FOOD_PIC_FIELD]['tmp_name'])) ){
         $_SESSION["foodUploadError"] = "imageTypeError";

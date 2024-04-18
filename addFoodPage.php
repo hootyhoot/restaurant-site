@@ -110,7 +110,8 @@
                             <th>Food Picture</th>
                             <th>Description</th>
                             <th>Category Name</th>
-                            <th>Delete</th>
+                            <th></th>
+                            <th></th>
 
                         </tr>
                     </div>
@@ -143,6 +144,8 @@
 
                                 echo"<td style='font-size: 12px;'>"; echo $row[5]; echo"</td>";
                                 echo "<td>"; echo $row[7]; echo "</td>";
+
+                                echo "<td>"; echo "<a href='modifyFoodPage.php?FoodID=".$row[0]; echo "'>Modify</a>"; echo "</td>";
 
                                 echo "<td>"; echo "<a href='deleteFoodFunction.php?FoodID=".$row[0]; echo "'>Delete</a>"; echo "</td>";
 
