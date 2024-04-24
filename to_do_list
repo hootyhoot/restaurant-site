@@ -21,11 +21,11 @@
 
 5.      Page to add new food into menu [DONE]
 5.1     CSS for addFoodPage
-5.2     Need function to modify food attributes e.g. name/price/availability (in this function, after amending, need to remove the food from cart table if it is set to unavailable) [WORKING ON IT - WJ]
+5.2     Need function to modify food attributes e.g. name/price/availability (in this function, after amending, need to remove the food from cart table if it is set to unavailable) [DONE]
 
 
 6.      Cart page [DONE]
-6.1     [COMPULSORY] JavaScript for 'modify cart quantity function' - the idea is to not want any submit button to update the table, we will add a 'number type input' and run a php/javascript to update the table if user clicked on the button AND hovered away from the input
+6.1     [COMPULSORY] JavaScript for 'modify cart quantity function' - the idea is to not want any submit button to update the table, we will add a 'number type input' and run a php/javascript to update the table if user clicked on the button AND hovered away from the input [WORKING ON IT - WJ]
 
 
 7.      Payment page [DONE]

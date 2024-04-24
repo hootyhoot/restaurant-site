@@ -147,7 +147,6 @@
 
                                 echo "<td>"; echo "<a href='modifyFoodPage.php?FoodID=".$row[0]; echo "'>Modify</a>"; echo "</td>";
 
-                                echo "<td>"; echo "<a href='deleteFoodFunction.php?FoodID=".$row[0]; echo "'>Delete</a>"; echo "</td>";
 
                                 echo "</tr>";
 

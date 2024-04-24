@@ -30,12 +30,18 @@
     $formFoodDescription = $_POST[FOOD_DESCRIPTION_FIELD];
     $formFoodPicType = $_FILES[FOOD_PIC_FIELD]['type'];
 
-    if($formFoodPicType != "image/jpeg" || !($formFoodPic = file_get_contents($_FILES[FOOD_PIC_FIELD]['tmp_name'])) ){
+
+    if($formFoodPicType != "image/jpeg" || 
+        $_FILES[FOOD_PIC_FIELD]['error'] == 4 || 
+        ($_FILES[FOOD_PIC_FIELD]['size'] == 0 && $_FILES[FOOD_PIC_FIELD]['error'] == 0) ){
+        
         $_SESSION["foodUploadError"] = "imageTypeError";
         header("Location: addFoodPage.php");
     }
 
     else{
+        $formFoodPic = file_get_contents($_FILES[FOOD_PIC_FIELD]['tmp_name']);
+
         $stmt = $conn->prepare("INSERT INTO Food (FoodName, Price , Availability , FoodPic , Description , CategoryID ) VALUES (?, ?, ?, ?, ?, ?) ");
         $stmt -> bind_param("ssssss", $formFoodName, $formFoodPrice, $formFoodAvailability, $formFoodPic, $formFoodDescription, $formFoodCategory);
 
