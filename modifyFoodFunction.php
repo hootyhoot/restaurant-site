@@ -64,6 +64,12 @@
                                 Availability = '$formFoodAvailability', Description = '$formFoodDescription', 
                                 CategoryID = '$formFoodCategory' WHERE FoodID = '$formFoodID'");
         }
+
+
+        //to remove all the food items from the cart if the food is changed to 'unavailable'
+        if($formFoodAvailability == "Not Available"){
+            $conn -> query("DELETE FROM Cart WHERE FoodID = '$formFoodID'");
+        }
         
         $conn -> close();
 

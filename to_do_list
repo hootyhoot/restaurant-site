@@ -25,7 +25,7 @@
 
 
 6.      Cart page [DONE]
-6.1     [COMPULSORY] JavaScript for 'modify cart quantity function' - the idea is to not want any submit button to update the table, we will add a 'number type input' and run a php/javascript to update the table if user clicked on the button AND hovered away from the input [WORKING ON IT - WJ]
+6.1     [COMPULSORY] JavaScript for 'modify cart quantity function' - the idea is to not want any submit button to update the table, we will add a 'number type input' and run a php/javascript to update the table if user clicked on the button AND hovered away from the input [DONE]
 
 
 7.      Payment page [DONE]

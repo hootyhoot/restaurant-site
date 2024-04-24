@@ -45,7 +45,7 @@
                         echo "<td> <img src='data:image/jpeg;base64,".base64_encode($foodRow['FoodPic'])."' width='100' height ='100'/> </td>";
                         echo "<td style='text-align:center'>" . $foodRow["FoodName"] . "</td>";
                         echo "<td style='text-align:right'>" . number_format($foodRow["Price"],2) . "</td>";
-                        echo "<td style='text-align:center'>" . $row["Quantity"] . "</td>";
+                        echo "<td style='text-align:center'><input type='number' id='" . $row["FoodID"] . "' name='quantity' value='" . $row['Quantity'] . "' min='1'>" . "</td>";
                         echo "<td style='text-align:right'>" . number_format($foodRow["Price"] * $row["Quantity"],2) . "</td>";
                         echo "<td> <a href='deleteFromCartFunction.php?FoodID=" . $row["FoodID"] . "'>Remove</a> </td>";
                     echo "</tr>";
@@ -70,5 +70,17 @@
         $conn -> close();
     ?>
     
+    
+    <script>
+        var quantityFields = document.getElementsByName("quantity");
+        
+        for(var i = 0; i < quantityFields.length; i++){
+            quantityFields[i].addEventListener("change", function(){
+                window.location.href = "updateCartFunction.php?FoodID=" + this.id + "&Quantity=" + this.value;
+            });
+        }
+    </script>
+
+
 </body>
 </html>
