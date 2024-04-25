@@ -48,7 +48,7 @@
 
                     <div class="foodFormField">
                         <label class="formLabel" for="foodPrice">Price</label>
-                        <input class="formInput" type="number" step="0.01" name="foodPrice" placeholder="Enter selling price">
+                        <input class="formInput" type="number" step="0.01" min='0.01' name="foodPrice" placeholder="Enter selling price">
                     </div>
 
 
@@ -110,9 +110,7 @@
                             <th>Food Picture</th>
                             <th>Description</th>
                             <th>Category Name</th>
-                            <th></th>
-                            <th></th>
-
+                            <th>Modify</th>
                         </tr>
                     </div>
 
@@ -145,7 +143,11 @@
                                 echo"<td style='font-size: 12px;'>"; echo $row[5]; echo"</td>";
                                 echo "<td>"; echo $row[7]; echo "</td>";
 
-                                echo "<td>"; echo "<a href='modifyFoodPage.php?FoodID=".$row[0]; echo "'>Modify</a>"; echo "</td>";
+                                
+                                
+                                echo "<td>"; echo "<a class='modifyButton' href='modifyFoodPage.php?FoodID=".$row[0]; echo "'>Modify</a>"; echo "</td>";
+
+
 
 
                                 echo "</tr>";

@@ -13,7 +13,7 @@
     <?php 
         session_start(); 
         include "navigationPanel.php";
-        define("FOOD_IMAGE_SIZE", 250);
+        define("FOOD_IMAGE_SIZE", 200);
     ?>
     
     <?php
