@@ -7,7 +7,7 @@
 /*--------------------------------------------*/
 /* For loginPage */
 
-.Login{
+.logReg{
 
     position: relative;
     color: black;
@@ -20,7 +20,7 @@
         color: white;  
     }
 
-    .loginForm{
+    .logRegForm{
         position: relative;
         background-color: white;
         margin: auto;
