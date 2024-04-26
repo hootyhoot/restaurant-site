@@ -1,4 +1,5 @@
 <?php
+    //initializing constants for the field names in the form
     define("FOOD_NAME_FIELD", "foodName");
     define("FOOD_CATEGORY_FIELD", "foodCategory");
     define("FOOD_PRICE_FIELD", "foodPrice");
@@ -6,23 +7,26 @@
     define("FOOD_DESCRIPTION_FIELD", "foodDescription");
     define("FOOD_PIC_FIELD", "foodPic");
     
-
+    //load up session variables to be used globally
     session_start();
 
-
+    //declaring variables for the database connection
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "restaurantDB";
 
+    //connecting to the sql database
     $conn = new mysqli($servername, $username, $password, $dbname);
 
+    //if connection fails, display error message
     if($conn -> connect_error){
         die("Connection failed: ". $conn->connect_error);
     }
 
     $_SESSION["foodUploadError"] = "None";
 
+    //declaring variables that stores the form inputs from the addFoodPage.php
     $formFoodName = $_POST[FOOD_NAME_FIELD];
     $formFoodCategory = $_POST[FOOD_CATEGORY_FIELD];
     $formFoodPrice = $_POST[FOOD_PRICE_FIELD];
@@ -30,7 +34,8 @@
     $formFoodDescription = $_POST[FOOD_DESCRIPTION_FIELD];
     $formFoodPicType = $_FILES[FOOD_PIC_FIELD]['type'];
 
-
+    //if the image type is not jpeg, or no image is uploaded, 
+    //set the 'foodUploadError' session variable and redirect to addFoodPage.php
     if($formFoodPicType != "image/jpeg" || 
         $_FILES[FOOD_PIC_FIELD]['error'] == 4 || 
         ($_FILES[FOOD_PIC_FIELD]['size'] == 0 && $_FILES[FOOD_PIC_FIELD]['error'] == 0) ){
@@ -39,6 +44,8 @@
         header("Location: addFoodPage.php");
     }
 
+    //if validation passed with no errors, insert the new food item into the database
+    //then redirect back to addFoodPage.php
     else{
         $formFoodPic = file_get_contents($_FILES[FOOD_PIC_FIELD]['tmp_name']);
 
@@ -50,6 +57,7 @@
         header("Location: addFoodPage.php");
     }
 
+    //close the connection
     $conn->close();
 
     
