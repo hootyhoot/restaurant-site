@@ -9,8 +9,8 @@
 
 <style>
     .foodContainer {
-        background-color: rgba(192, 192, 192, 0.5);
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     .foodContainer a {
@@ -21,6 +21,24 @@
     .foodContainer a h3 {
         color: black;
     }
+
+    .foodCategoryPageHeader h1 {
+        color: black !important;
+    }
+    
+    .foodCategoryPageHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
 </style>
 
 <body>
