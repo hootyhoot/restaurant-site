@@ -60,4 +60,29 @@ FINAL CHECKS TO DO BEFORE SUBMISSION
 
 1. Match ERD with SQL database
 2. Ensure all form verifications are in place (check the validation logic)
-3. Check if Food deleted from Table, what bugs will appear
+        2.1 login form
+        2.2 register form
+        2.3 adding to cart form (in specificFoodPage)
+        2.4 Cart page + checkout page + payment page
+        2.5 Edit profile form
+        2.6 Amend food menu details form (in modifyFoodPage)
+
+----Functions to test----
+3. Create account
+        -should record Name, Email, Password
+4. Log in
+5. Edit profile (users should be able to edit their profile after logging in)
+
+6. Browse menu items categorized into groups
+7. Menu items should show details (Name, Description, Image, Price, Availability)
+8. Add to cart with Quantity specified
+
+9. Cart should display list of all items with prices & quantity
+10. Update quantity of cart items (changes should be reflected dynamically)
+11. Items in cart should be able to be removed
+
+12. Checkout should collect customer info (name, contact num, address)
+        -and must display order summary of itemized total before confirmation
+13. Payment mockup
+
+14. VISUAL DESIGN FOLLOWS A CONSISTENT THEME
