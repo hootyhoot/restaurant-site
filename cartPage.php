@@ -66,13 +66,13 @@
                     //display the food item details in a table row
                     echo "<tr class='cartItem'>";
                     echo "<td class='itemNumber' style='text-align:center'>" . $itemCount . "</td>";
-                        //display the picture of the food item
+                    //display the picture of the food item
                     echo "<td class='itemImage'> <img src='data:image/jpeg;base64,".base64_encode($foodRow['FoodPic'])."' width='100' height ='100'/> </td>";
-                        //display the food name, price, quantity, sub total and remove button
+                    //display the food name, price, quantity, sub total and remove button
                     echo "<td class='itemName' style='text-align:center'>" . $foodRow["FoodName"] . "</td>";
-                    echo "<td class='itemPrice' style='text-align:right'>" . number_format($foodRow["Price"],2) . "</td>";
+                    echo "<td class='itemPrice' style='text-align:center'>" . number_format($foodRow["Price"],2) . "</td>";
                     echo "<td class='itemQuantity' style='text-align:center'><input type='number' id='" . $row["FoodID"] . "' name='quantity' value='" . $row['Quantity'] . "' min='1'>" . "</td>";
-                    echo "<td class='itemSubtotal' style='text-align:right'>" . number_format($foodRow["Price"] * $row["Quantity"],2) . "</td>";
+                    echo "<td class='itemSubtotal' style='text-align:center'>" . number_format($foodRow["Price"] * $row["Quantity"],2) . "</td>";
                     
                     echo "<td class='itemRemove'> <a href='deleteFromCartFunction.php?FoodID=" . $row["FoodID"] . "'><img src='icons/bin.png' alt='Remove'></a> </td>";
                     
@@ -86,7 +86,7 @@
                 //display the grand total of the cart items
                 echo "<tr></tr>";
                 echo "<tr> <td style='text-align:right' colspan='5'>Grand Total</td>";
-                echo "<td style='text-align:right'>" . number_format($grandTotal,2) . "</td> </tr>";
+                echo "<td style='text-align:center'>" . number_format($grandTotal,2) . "</td> </tr>";
 
             echo "</table>";
 

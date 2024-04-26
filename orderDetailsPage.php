@@ -75,7 +75,7 @@
 
             //display grand total
             echo "<tr> <td style='text-align:right' colspan='5'>Grand Total</td>";
-            echo "<td style='text-align:right'>" . number_format($grandTotal,2) . "</td> </tr>";
+            echo "<td style='text-align:center'>" . number_format($grandTotal,2) . "</td> </tr>";
 
         echo "</table>";
 
@@ -92,15 +92,15 @@
                 //display row number
                 echo "<td class='itemCount' style='text-align:center'>" . $itemCount . "</td>";
                 //display food picture
-                echo "<td class='itemImage'> <img src='data:image/jpeg;base64,".base64_encode($row['FoodPic'])."' width='100' height ='100'/> </td>";
+                echo "<td class='itemImage' style='text-align:center'> <img src='data:image/jpeg;base64,".base64_encode($row['FoodPic'])."' width='100' height ='100'/> </td>";
                 //display food name
                 echo "<td class='itemName' style='text-align:center'>" . $row["FoodName"] . "</td>";
                 //display food price
-                echo "<td class='itemPrice' style='text-align:right'>" . number_format($row["Price"],2) . "</td>";
+                echo "<td class='itemPrice' style='text-align:center'>" . number_format($row["Price"],2) . "</td>";
                 //display ordered quantity
                 echo "<td class='itemQuantity' style='text-align:center'>" . $row["Quantity"] . "</td>";
                 //display subtotal of the food item
-                echo "<td class='itemSubtotal' style='text-align:right'>" . number_format($row["Price"] * $row["Quantity"],2) . "</td>";
+                echo "<td class='itemSubtotal' style='text-align:center'>" . number_format($row["Price"] * $row["Quantity"],2) . "</td>";
             echo "</tr>";
             
             //cumulative sum into grand total
