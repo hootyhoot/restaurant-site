@@ -30,7 +30,7 @@
             header("Location: paymentPage.php");
         }
         //if validation passed, add to food order database and redirect to receiptPage.php
-        else{
+        else if($_SESSION["paymentDetailsError"] == "None"){
             addToFoodOrder("Credit Card");
             header("Location: receiptPage.php");
         }

@@ -76,7 +76,7 @@
         header("Location: registerPage.php");
     }
     //if no errors are raised, then proceed to insert user registration data into the database
-    else{
+    else if($_SESSION["registerError"] == "None"){
         $stmt = $conn->prepare("INSERT INTO User (Username, Password, FirstName, LastName, Email, ContactNo, UserType) VALUES (?, ?, ?, ?, ?, ?, 'Customer')");
         $stmt->bind_param("ssssss", $formUsername, $formPassword, $formFirstName, $formLastName, $formEmail, $contactNum);
         $stmt->execute();

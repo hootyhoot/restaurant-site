@@ -36,29 +36,29 @@
 
     //if the image type is not jpeg, or no image is uploaded, 
     //set the 'foodUploadError' session variable and redirect to addFoodPage.php
-    if($formFoodPicType != "image/jpeg" || 
+    if($_SESSION["foodUploadError"] == "None" && ($formFoodPicType != "image/jpeg" || 
         $_FILES[FOOD_PIC_FIELD]['error'] == 4 || 
-        ($_FILES[FOOD_PIC_FIELD]['size'] == 0 && $_FILES[FOOD_PIC_FIELD]['error'] == 0) ){
+        ($_FILES[FOOD_PIC_FIELD]['size'] == 0 && $_FILES[FOOD_PIC_FIELD]['error'] == 0)) ){
         
         $_SESSION["foodUploadError"] = "imageTypeError";
         header("Location: addFoodPage.php");
     }
 
     //if the price input is not numeric, set the 'foodUploadError' session variable and redirect to addFoodPage.php
-    else if(!is_numeric($formFoodPrice)){
+    else if($_SESSION["foodUploadError"] == "None" && !is_numeric($formFoodPrice)){
         $_SESSION["foodUploadError"] = "priceError";
         header("Location: addFoodPage.php");
     }
 
     //if any fields are empty, set the 'foodUploadError' session variable and redirect to addFoodPage.php
-    else if($formFoodName == "" || $formFoodDescription == "" || $formFoodPrice == ""){
+    else if($_SESSION["foodUploadError"] == "None" && ($formFoodName == "" || $formFoodDescription == "" || $formFoodPrice == "")){
         $_SESSION["foodUploadError"] = "emptyFields";
         header("Location: addFoodPage.php");
     }
 
     //if validation passed with no errors, insert the new food item into the database
     //then redirect back to addFoodPage.php
-    else{
+    else if($_SESSION["foodUploadError"] == "None"){
         $formFoodPic = file_get_contents($_FILES[FOOD_PIC_FIELD]['tmp_name']);
 
         $stmt = $conn->prepare("INSERT INTO Food (FoodName, Price , Availability , FoodPic , Description , CategoryID ) VALUES (?, ?, ?, ?, ?, ?) ");

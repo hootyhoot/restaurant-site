@@ -22,7 +22,7 @@
         header("Location: editProfilePage.php");
     }
     //if validation passed, update the user details in the database and redirect to editProfilePage.php
-    else{
+    else if($_SESSION["updateProfileError"] == "None"){
         //declaring variables for the database connection
         $servername = "localhost";
         $username = "root";

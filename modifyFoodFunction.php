@@ -43,13 +43,13 @@
 
 
     //if the price input is not numeric, set the 'foodModifyError' session variable and redirect to modifyFoodPage.php
-    if(!is_numeric($formFoodPrice)){
+    if($_SESSION["foodModifyError"]=="None" && !is_numeric($formFoodPrice)){
         $_SESSION["foodModifyError"] = "priceError";
         header("Location: modifyFoodPage.php?FoodID=" . $formFoodID);
     }
 
     //if any fields are empty, set the 'foodModifyError' session variable and redirect to modifyFoodPage.php
-    else if($formFoodName == "" || $formFoodDescription == "" || $formFoodPrice == ""){
+    else if($_SESSION["foodModifyError"]=="None" && ($formFoodName == "" || $formFoodDescription == "" || $formFoodPrice == "")){
         $_SESSION["foodModifyError"] = "emptyFields";
         header("Location: modifyFoodPage.php?FoodID=" . $formFoodID);
     }

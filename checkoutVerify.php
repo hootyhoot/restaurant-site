@@ -30,7 +30,7 @@
         header("Location: checkoutPage.php");
     }
     //if validation passed, store form details in session and redirect to paymentPage.php
-    else{
+    else if ($_SESSION["checkoutDetailsError"] == "None"){
         
         $_SESSION["checkoutFormDetails"] = $_POST;
         header("Location: paymentPage.php");
