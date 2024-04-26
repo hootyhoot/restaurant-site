@@ -21,13 +21,9 @@ INSERT IGNORE INTO User (UserID, Username, Password, FirstName, LastName, Email,
         (3, 'Patrick', 'Star123', 'Patrick', 'Star', 'under_the_rock@gmail.com', '0173396049', 'Customer');
 
 
-CREATE TABLE IF NOT EXISTS Cart(
-    CartID INT AUTO_INCREMENT PRIMARY KEY,
-    UserID INT,
-    FoodID INT,
-    Quantity INT NOT NULL,
-    FOREIGN KEY (UserID) REFERENCES User(UserID) ON UPDATE RESTRICT ON DELETE RESTRICT,
-    FOREIGN KEY (FoodID) REFERENCES Food (FoodID) ON UPDATE RESTRICT ON DELETE RESTRICT
+CREATE TABLE IF NOT EXISTS Category(
+    CategoryID INT AUTO_INCREMENT PRIMARY KEY,
+    CategoryName VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Food(
@@ -41,13 +37,15 @@ CREATE TABLE IF NOT EXISTS Food(
     FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID) ON UPDATE RESTRICT ON DELETE RESTRICT
 );
 
-
-
-
-CREATE TABLE IF NOT EXISTS Category(
-    CategoryID INT AUTO_INCREMENT PRIMARY KEY,
-    CategoryName VARCHAR(50) NOT NULL
+CREATE TABLE IF NOT EXISTS Cart(
+    CartID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT,
+    FoodID INT,
+    Quantity INT NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES User(UserID) ON UPDATE RESTRICT ON DELETE RESTRICT,
+    FOREIGN KEY (FoodID) REFERENCES Food (FoodID) ON UPDATE RESTRICT ON DELETE RESTRICT
 );
+
 
 INSERT IGNORE INTO Category (CategoryID, CategoryName) VALUES 
         (1, 'Appetizers'),
@@ -63,21 +61,6 @@ INSERT IGNORE INTO Food (FoodID, FoodName, Price, Availability, FoodPic, Descrip
         (5, 'Platter', 21.80, 'Available', LOAD_FILE('/Applications/XAMPP/xamppfiles/htdocs/restaurant-site/default images/platter.jpg'), 'Spoilt with choice', 1),
         (6, 'Choco Volcano', 7.30, 'Available', LOAD_FILE('/Applications/XAMPP/xamppfiles/htdocs/restaurant-site/default images/choco volcano.jpg'), 'Erupting with delight', 3);
 
-
-CREATE TABLE IF NOT EXISTS FoodOrder( 
-    OrderID INT AUTO_INCREMENT PRIMARY KEY,
-    UserID INT,
-    FoodID INT,
-    Quantity INT,
-    PaymentID INT,
-    DeliveryID INT,
-    FOREIGN KEY (UserID) REFERENCES User(UserID) ON UPDATE RESTRICT ON DELETE RESTRICT,
-    FOREIGN KEY (FoodID) REFERENCES Food(FoodID) ON UPDATE RESTRICT ON DELETE RESTRICT,
-    FOREIGN KEY (PaymentID) REFERENCES Payment(PaymentID) ON UPDATE RESTRICT ON DELETE RESTRICT,
-    FOREIGN KEY (DeliveryID) REFERENCES DeliveryDetails(DeliveryID) ON UPDATE RESTRICT ON DELETE RESTRICT
-);
-
-
 CREATE TABLE IF NOT EXISTS Payment(
     PaymentID INT AUTO_INCREMENT PRIMARY KEY,
     PaymentType ENUM('Credit Card', 'Touch N Go') NOT NULL,
@@ -92,4 +75,17 @@ CREATE TABLE IF NOT EXISTS DeliveryDetails(
     LastName VARCHAR(50) NOT NULL,
     ContactNo VARCHAR(11) NOT NULL,
     Address VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS FoodOrder( 
+    OrderID INT AUTO_INCREMENT PRIMARY KEY,
+    UserID INT,
+    FoodID INT,
+    Quantity INT,
+    PaymentID INT,
+    DeliveryID INT,
+    FOREIGN KEY (UserID) REFERENCES User(UserID) ON UPDATE RESTRICT ON DELETE RESTRICT,
+    FOREIGN KEY (FoodID) REFERENCES Food(FoodID) ON UPDATE RESTRICT ON DELETE RESTRICT,
+    FOREIGN KEY (PaymentID) REFERENCES Payment(PaymentID) ON UPDATE RESTRICT ON DELETE RESTRICT,
+    FOREIGN KEY (DeliveryID) REFERENCES DeliveryDetails(DeliveryID) ON UPDATE RESTRICT ON DELETE RESTRICT
 );
