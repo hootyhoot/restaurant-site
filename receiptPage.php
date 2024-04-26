@@ -18,7 +18,7 @@
         .receiptContainer {
             text-align: center;
         }
-    </style>
+</style>
 
 <body>
     
@@ -26,6 +26,12 @@
     <?php 
     
         session_start(); 
+
+        //condition check to see if user is properly logged in
+        if(!isset($_SESSION["userID"])){
+            header("Location: loginPage.php");
+        }
+
         include "navigationPanel.php";
 
         // Assuming the purchase details are stored in the session
