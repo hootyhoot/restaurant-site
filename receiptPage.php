@@ -48,7 +48,7 @@
     <h1 class="receiptTitle">Receipt</h1>
 
     <div class="section">
-        <h2 class="sectionTitle">Customer Details:</h2>
+        <h2 class="sectionTitle">Delivery Details:</h2>
         <p class="detail">Last Name: <?php echo $lastName; ?></p>
         <p class="detail">Contact Number: <?php echo $contactNo; ?></p>
         <p class="detail">Address: <?php echo $address; ?></p>
