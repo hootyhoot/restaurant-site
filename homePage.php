@@ -91,6 +91,12 @@ footer h2 {
 <body>
     <?php
     session_start();
+    
+    //condition check to see if user is properly logged in
+    if(!isset($_SESSION["userID"])){
+        header("Location: loginPage.php");
+    }
+
     include "navigationPanel.php";
     ?>
     <div class="container">

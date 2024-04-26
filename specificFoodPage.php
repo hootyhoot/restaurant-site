@@ -14,9 +14,15 @@
     <?php
         //load up session variables to be used globally
         session_start(); 
+
+        //condition check to see if user is properly logged in
+        if(!isset($_SESSION["userID"])){
+            header("Location: loginPage.php");
+        }
+
         //include the navigation panel
         include "navigationPanel.php";
-       //define("FOOD_IMAGE_SIZE", 400);
+
         define("FOOD_ID", $_GET["foodID"]);
     ?>
 
