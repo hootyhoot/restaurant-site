@@ -6,6 +6,20 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+<style>
+        body {
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .receiptContainer {
+            text-align: center;
+        }
+    </style>
+
 <body>
     
     
