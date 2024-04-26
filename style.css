@@ -265,27 +265,29 @@
 .addFoodFormContainer {
     background-color: #fff;
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 5px;
+    margin: 20px auto; /* auto left and right margins center the element */
+    width: 20%; /* reduce the width to create space on the sides */
+    border-radius: 15px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    display: flex; /* use flexbox to center the form fields */
+    flex-direction: column; /* stack the form fields vertically */
+    align-items: center; /* center the form fields horizontally */
+    
 }
 
 .foodFormField {
     margin-bottom: 20px;
+    width: 100%;
 }
+
 
 .formLabel {
     display: block;
     margin-bottom: 5px;
+    width: 100%;
 }
 
-.formInput {
-    width: 99%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+
 
 .foodFormButton {
     text-align: center;
@@ -320,6 +322,8 @@
 
 .foodRecordTable th.foodRecordHeader, .foodRecordTable td.foodRecordCell {
     border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
     padding: 10px;
     text-align: center;
 }
@@ -921,7 +925,7 @@ button:hover {
 .tableHeader {
     padding: 10px;
     text-align: left;
-    background-color: #f8f8f8;
+    background-color: none;
     border-bottom: 1px solid #ddd;
 }
 
