@@ -36,7 +36,7 @@
         //include the navigation panel
         include "navigationPanel.php";
 
-        // Assuming the purchase details are stored in the session
+        //delcaring variables to store confirmed order details
         $totalAmount = $_SESSION['cartGrandTotal'];
         $paymentMethod = $_SESSION['checkoutFormDetails']['paymentMethod'];
         $lastName = $_SESSION['checkoutFormDetails']['checkoutLastName'];
@@ -44,32 +44,41 @@
         $address = $_SESSION['checkoutFormDetails']['checkoutAddress'];
     ?>
 
-<div class="receiptContainer">
-    <h1 class="receiptTitle">Receipt</h1>
 
-    <div class="section">
-        <h2 class="sectionTitle">Delivery Details:</h2>
-        <p class="detail">Last Name: <?php echo $lastName; ?></p>
-        <p class="detail">Contact Number: <?php echo $contactNo; ?></p>
-        <p class="detail">Address: <?php echo $address; ?></p>
+
+    <div class="receiptContainer">
+        <!--page title-->
+        <h1 class="receiptTitle">Receipt</h1>
+
+        <!--display delivery details-->
+        <div class="section">
+            <h2 class="sectionTitle">Delivery Details:</h2>
+            <p class="detail">Last Name: <?php echo $lastName; ?></p>
+            <p class="detail">Contact Number: <?php echo $contactNo; ?></p>
+            <p class="detail">Address: <?php echo $address; ?></p>
+        </div>
+
+        <!--display order total amount-->
+        <div class="section">
+            <h2 class="sectionTitle">Total Amount:</h2>
+            <p class="detail">RM<?php echo $totalAmount; ?></p>
+        </div>
+
+        <!--display payment method-->
+        <div class="section">
+            <h2 class="sectionTitle">Payment Method:</h2>
+            <p class="detail"><?php echo $paymentMethod; ?></p>
+        </div>
+
+        <h2 class="thankYouMessage">Thank you for your purchase!</h2>
+
+        <!--button to redirect to homePage.php-->
+        <button onclick="location.href='homePage.php';" class="btn btn-primary" id="continue-btn">Continue</button>
+
+        <!--button to print the receipt-->
+        <button onclick="window.print();" class="btn btn-primary" id="print">Print</button>
     </div>
 
-    <div class="section">
-        <h2 class="sectionTitle">Total Amount:</h2>
-        <p class="detail">RM<?php echo $totalAmount; ?></p>
-    </div>
-
-    <div class="section">
-        <h2 class="sectionTitle">Payment Method:</h2>
-        <p class="detail"><?php echo $paymentMethod; ?></p>
-    </div>
-
-    <h2 class="thankYouMessage">Thank you for your purchase!</h2>
-
-    <button onclick="location.href='homePage.php';" class="btn btn-primary" id="continue-btn">Continue</button>
-
-    <button onclick="window.print();" class="btn btn-primary" id="print">Print</button>
-</div>
 </body>
 
 </html>
