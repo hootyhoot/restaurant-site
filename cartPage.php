@@ -114,7 +114,13 @@
             //listen for the 'change' event
             //and redirect to updateCartFunction.php with the FoodID and updated Quantity of the triggered input field
             quantityFields[i].addEventListener("change", function(){
-                window.location.href = "updateCartFunction.php?FoodID=" + this.id + "&Quantity=" + this.value;
+                if(this.value < 1){
+                    this.value = 1;
+                    window.location.href = "updateCartFunction.php?FoodID=" + this.id + "&Quantity=" + this.value;
+                }
+                else{
+                    window.location.href = "updateCartFunction.php?FoodID=" + this.id + "&Quantity=" + this.value;
+                }
             });
         }
     </script>
