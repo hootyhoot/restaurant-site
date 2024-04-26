@@ -12,39 +12,35 @@
         include "navigationPanel.php";
     ?>
 
-    
-
-    <div>
+    <div class="checkoutContainer">
+            
+        <div class="checkoutTitle"><h1>Shipping Details</h1></div>
         
-        <div><h1>Shipping Details</h1></div>
-
-        <form name="checkoutForm" action="checkoutVerify.php" method="post">
-
-
-            <!---------- To input shipping details -------------------->
-            <div>
-                <label class="formLabel" for="checkoutFirstName">First Name</label>
-                <input class="formInput" type="text" id="checkoutFirstName" name="checkoutFirstName"> 
+        <form class="checkoutForm" name="checkoutForm" action="checkoutVerify.php" method="post">
+        
+            <div class="formField checkoutFirstNameField">
+                <label class="formLabel checkoutFirstNameLabel" for="checkoutFirstName">First Name</label>
+                <input class="formInput checkoutFirstNameInput" type="text" id="checkoutFirstName" name="checkoutFirstName"> 
             </div>
 
-            <div>
-                <label class="formLabel" for="checkoutLastName">Last Name</label>
-                <input class="formInput" type="text" id="checkoutLastName" name="checkoutLastName"> 
+            <div class="formField checkoutLastNameField">
+                <label class="formLabel checkoutLastNameLabel" for="checkoutLastName">Last Name</label>
+                <input class="formInput checkoutLastNameInput" type="text" id="checkoutLastName" name="checkoutLastName"> 
             </div>
 
-            <div>
-                <label class="formLabel" for="checkoutContactNo">Contact Number</label>
-                <input class="formInput" type="tel" id="checkoutContactNo" name="checkoutContactNo" minlength="10" maxlength="10" pattern="[0-9]{10}" title="0121112222" placeholder="without '-'">
+            <div class="formField checkoutContactNoField">
+                <label class="formLabel checkoutContactNoLabel" for="checkoutContactNo">Contact Number</label>
+                <input class="formInput checkoutContactNoInput" type="tel" id="checkoutContactNo" name="checkoutContactNo" minlength="10" maxlength="10" pattern="[0-9]{10}" title="0121112222" placeholder="without '-'">
             </div>
 
-            <div>
-                <label class="formLabel" for="checkoutAddress">Address</label>
-                <input class="formInput" type="text" id="checkoutAddress" name="checkoutAddress"> 
+            <div class="formField checkoutAddressField">
+                <label class="formLabel checkoutAddressLabel" for="checkoutAddress">Address</label>
+                <input class="formInput checkoutAddressInput" type="text" id="checkoutAddress" name="checkoutAddress"> 
             </div>
 
+            <div class="orderSummaryTitle"><h1>Order Summary</h1></div>
 
-            <!-- To display Order Summary and Choose Payment Option -->
-            <div><h1>Order Summary</h1></div>
+
             <?php
                 $servername = "localhost";
                 $username = "root";
@@ -62,45 +58,49 @@
                 $itemCount = 1;
                 $grandTotal = 0;
                 
-                echo "<div>";
-
-                    echo "<table>";
-                        echo "<tr> <th>Item No.</th> <th>Food Name</th> <th>Quantity</th> <th>Sub Total</th> </tr>";
-
+                
+                echo "<div class='orderSummaryContainer'>";
+                
+                    echo "<table class='orderSummaryTable'>";
+                        echo "<tr> <th class='tableHeader'>Item No.</th> <th class='tableHeader'>Food Name</th> <th class='tableHeader'>Quantity</th> <th class='tableHeader'>Sub Total</th> </tr>";
+                
                         while($row = $result -> fetch_assoc()){
-                            echo "<tr>";
-                                echo "<td style='text-align:center'>" . $itemCount . "</td>";
-                                echo "<td style='text-align:center'>" . $row["FoodName"] . "</td>";
-                                echo "<td style='text-align:center'>" . $row["Quantity"] . "</td>";
-                                echo "<td style='text-align:right'>" . number_format($row["Price"] * $row["Quantity"],2) . "</td>";
+                            echo "<tr class='tableRow'>";
+                                echo "<td class='tableData centerText'>" . $itemCount . "</td>";
+                                echo "<td class='tableData centerText'>" . $row["FoodName"] . "</td>";
+                                echo "<td class='tableData centerText'>" . $row["Quantity"] . "</td>";
+                                echo "<td class='tableData rightText'>" . number_format($row["Price"] * $row["Quantity"],2) . "</td>";
                             echo "</tr>";
-
+                
                             $grandTotal += $row["Price"] * $row["Quantity"];
                             $itemCount++;
                         }
-
-                        echo "<tr></tr>";
-                        echo "<tr> <td style='text-align:right' colspan='3'>Grand Total</td>";
-                        echo "<td style='text-align:right'>" . number_format($grandTotal,2) . "</td> </tr>";
-
+                
+                        echo "<tr class='tableRow'></tr>";
+                        echo "<tr class='tableRow'> <td class='tableData rightText' colspan='3'>Grand Total</td>";
+                        echo "<td class='tableData rightText'>" . number_format($grandTotal,2) . "</td> </tr>";
+                
                     echo "</table>";
-
+                
                 echo "</div>";
+                
                 
                 $_SESSION["cartGrandTotal"] = $grandTotal;
                 $conn -> close();
             ?>
 
 
-            <div>
-                <div><h1>Payment Method</h1></div>
+<div class="paymentMethodContainer">
+                <div class="paymentMethodTitle"><h1>Payment Method</h1></div>
 
-                <label class="" for="paymentMethod"></label>
-                <input class="" type="radio" id="paymentMethod" name="paymentMethod" value="CreditCard" checked> Credit Card
-                <input class="" type="radio" id="paymentMethod" name="paymentMethod" value="TouchNGo"> TouchNGo
+                <label class="paymentMethodLabel" for="paymentMethod"></label>
+                <input class="paymentMethodInput" type="radio" id="paymentMethod" name="paymentMethod" value="CreditCard" checked>
+                <img src="creditcardicon.png" alt="Credit Card Icon" class="paymentMethodIcon"> Credit Card
+                <input class="paymentMethodInput" type="radio" id="paymentMethod" name="paymentMethod" value="TouchNGo">
+                <img src="Tngicon.svg" alt="Touch 'n Go Icon" class="paymentMethodIcon"> Touch 'n Go
             </div>
-            
-            <div>
+                
+            <div class="checkoutSubmitButtonContainer">
                 <input type="submit" name="checkoutSubmitButton" value="Place Order">
             </div>
 
@@ -109,11 +109,11 @@
         <?php
 
             if($_SESSION["checkoutDetailsError"] == "Empty Fields"){
-                echo "<h3 style='color:red'>Please fill in all fields</h3>";
+                echo "<h3 class='checkoutError'>Please fill in all fields</h3>";
                 $_SESSION["checkoutDetailsError"] = "null";
             }
             else if($_SESSION["checkoutDetailsError"] == "Invalid Contact Number"){
-                echo "<h3 style='color:red'>Invalid Contact Number</h3>";
+                echo "<h3 class='checkoutError'>Invalid Contact Number</h3>";
                 $_SESSION["checkoutDetailsError"] = "null";
             }
 

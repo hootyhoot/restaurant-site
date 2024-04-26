@@ -6,14 +6,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body style ="background-color:#D4D4D4  ;">
 
     <?php 
         session_start();
         include "navigationPanel.php";
     ?>
 
-    <h1>Order Details</h1>
+    <div class="orderDetailsTitle"><h1>Order Details</h1></div>
+
 
     <?php
         $orderDate = $_GET["OrderDate"];
@@ -37,17 +38,17 @@
 
         
 
-        echo "<div>";
-            echo "<h4>Order Date: " . $orderDate . "</h4>";
-            echo "<h4>Payment ID: " . $paymentID . "</h4>";
-            echo "<h4>Receipient Name: " . $receipientName . "</h4>";
-        echo "<div>";
+        echo "<div class='orderInfo'>";
+            echo "<h4 class='orderDate'>Order Date: " . $orderDate . "</h4>";
+            echo "<h4 class='paymentId'>Payment ID: " . $paymentID . "</h4>";
+            echo "<h4 class='recipientName'>Receipient Name: " . $receipientName . "</h4>";
+        echo "</div>";
 
 
         $itemCount = 1;
         $grandTotal = 0;
 
-        echo "<table>";
+        echo "<table class='orderDetailsTable'>";
             //table header
             echo "<tr>  <th>Item No.</th>   <th></th>   <th>Food Name</th> <th>Price</th>  <th>Quantity</th>    <th>Sub Total</th>   <th></th>   </tr>";
             
@@ -65,19 +66,29 @@
 
         function displayRow(&$itemCount, &$grandTotal, $row){
                     
-                    echo "<tr>";
-                        echo "<td style='text-align:center'>" . $itemCount . "</td>";
-                        echo "<td> <img src='data:image/jpeg;base64,".base64_encode($row['FoodPic'])."' width='100' height ='100'/> </td>";
-                        echo "<td style='text-align:center'>" . $row["FoodName"] . "</td>";
-                        echo "<td style='text-align:right'>" . number_format($row["Price"],2) . "</td>";
-                        echo "<td style='text-align:center'>" . $row["Quantity"] . "</td>";
-                        echo "<td style='text-align:right'>" . number_format($row["Price"] * $row["Quantity"],2) . "</td>";
-                    echo "</tr>";
+            echo "<tr class='orderItem'>";
+            echo "<td class='itemCount' style='text-align:center'>" . $itemCount . "</td>";
+            echo "<td class='itemImage'> <img src='data:image/jpeg;base64,".base64_encode($row['FoodPic'])."' width='100' height ='100'/> </td>";
+            echo "<td class='itemName' style='text-align:center'>" . $row["FoodName"] . "</td>";
+            echo "<td class='itemPrice' style='text-align:right'>" . number_format($row["Price"],2) . "</td>";
+            echo "<td class='itemQuantity' style='text-align:center'>" . $row["Quantity"] . "</td>";
+            echo "<td class='itemSubtotal' style='text-align:right'>" . number_format($row["Price"] * $row["Quantity"],2) . "</td>";
+        echo "</tr>";
                     
                     $grandTotal += $row["Price"] * $row["Quantity"];
                     $itemCount++;
 
         }
+
+        
+        echo "<div class='backButtonContainer'><button onclick='goBack()'>Go Back</button></div>";
+        
+
+        echo "<script>
+        function goBack() {
+        window.history.back();
+        }
+        </script>";
 
         $conn -> close();
 

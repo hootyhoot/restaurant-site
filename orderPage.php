@@ -6,7 +6,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+  <!-- <body style ="background-color:#D4D4D4  ;"> -->
+  <body style="background: url('Cartpage.jpg');">
+
+    
 
         <?php 
             session_start();
@@ -33,7 +36,7 @@
         
         ?>
 
-        <div><h1>Orders</h1></div>
+        <div class="orderTitle"><h1>Orders</h1></div>
 
         
         <?php
@@ -44,14 +47,14 @@
                 $orderDate = $row["PaymentDate"];
                 $orderDate = date("Y-m-d");
 
-                echo "<table>";
+                echo "<table class='orderTable'>";
 
-                    echo "<tr> <th>No.</th> <th>Order Date</th> <th>Delivery Details</th> <th>Payment Details</th> </tr>";
+                echo "<tr class='tableHeader'> <th>No.</th> <th>Order Date</th> <th>Delivery Details</th> <th>Payment Details</th> </tr>";
 
-                    displayrow($orderCount, $orderDate, $row);
-                    $orderCount++;
+                displayrow($orderCount, $orderDate, $row);
+                $orderCount++;
 
-                    while($row = $result -> fetch_assoc()){
+                while($row = $result -> fetch_assoc()){
                         if($paymentID != $row["PaymentID"]){
                             
                             $paymentID = $row["PaymentID"];
@@ -80,19 +83,19 @@
 
 
             function displayRow($orderCount, $orderDate, $row){
-                echo "<div>";
+                echo "<div class='orderRow'>";
 
-                        echo "<tr onClick='location.href=\"orderDetailsPage.php?PaymentID=" . $row["PaymentID"] . 
+                        echo "<tr class='orderDetails' onClick='location.href=\"orderDetailsPage.php?PaymentID=" . $row["PaymentID"] . 
                                 "&OrderDate=" . $orderDate . "&DeliveryFirstName=" . $row["FirstName"] .
                                 "&DeliveryLastName=" . $row["LastName"] .   "\"'>";
 
 
-                            echo "<td style='text-align:center'>" . $orderCount . "</td>";
-                            echo "<td style='text-align:center'>" . $orderDate . "</td>";
+                            echo "<td class='orderCount' style='text-align:center'>" . $orderCount . "</td>";
+                            echo "<td class='orderDate' style='text-align:center'>" . $orderDate . "</td>";
                             
-                            echo "<td>";
+                            echo "<td class='deliveryDetails'>";
                                 
-                                echo "<table>";
+                                echo "<table class='deliveryTable'>";
 
                                     echo "<tr>";
                                         echo "<td style='text-align:left'>Deliver To: " . $row["FirstName"] . " " . $row["LastName"] . "</td>";
@@ -111,9 +114,9 @@
                             echo "</td>";
                                 
 
-                            echo "<td>";
+                            echo "<td class='paymentDetails'>";
 
-                                echo "<table>";
+                            echo "<table class='paymentTable'>";
 
                                     echo "<tr>";
                                         echo "<td style='text-align:left'>Payment ID: " . $row["PaymentID"] . "</td>";

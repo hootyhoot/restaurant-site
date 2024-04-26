@@ -8,7 +8,7 @@
 </head>
 
 
-<body>
+<body background="foodcategory.jpg">
 
     <?php 
         session_start(); 

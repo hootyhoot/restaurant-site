@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body style="background-color: black;">
+<body class="registerpage">
 
     <?php session_start(); ?>
 
     <div class="Login">
 
-        <h2>REGISTRATION</h2>
+    <h2 class="registrationHeader">REGISTRATION</h2>
 
 
         <div class="loginForm">
@@ -51,6 +51,16 @@
                 <div class="formField">
                     <label class="formLabel" for="contactNum">Contact Number</label>
                     <input class="formInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="10" pattern="[0-9]{10}" title="0121112222" placeholder="without '-'">
+                </div>
+
+                <div class="formField newsAndPromotionsField">
+                    <input type="checkbox" id="newsAndPromotions">
+                    <label for="newsAndPromotions">I want the latest news and promotions!</label>
+                </div>
+
+                <div class="formField termsAndConditionsField">
+                    <input type="checkbox" id="termsAndConditions">
+                    <label for="termsAndConditions">I accept terms and conditions</label>
                 </div>
 
                 <input class="formButton" type="submit" value="Register Now">

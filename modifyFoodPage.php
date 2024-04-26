@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body style ="background-color:#D4D4D4  ;">
 
         <?php 
             session_start(); 
@@ -32,23 +32,20 @@
             echo "Modify Food: " . $row["FoodName"];
         ?>
 
-        <div>
-            
-            <form name = "modifyFoodForm" action="modifyFoodFunction.php" method="post" enctype="multipart/form-data">
+<div class="modifyFoodTitle">Modify Food: <?= $row["FoodName"] ?></div>
 
-                    <div>
-                        <input type="hidden" id="foodID" name="foodID" value="<?= $row['FoodID']?>">
-                    </div>
+<form class="modifyFoodForm" name="modifyFoodForm" action="modifyFoodFunction.php" method="post" enctype="multipart/form-data">
 
-                    <div class="foodFormField">
-                        <label class="formLabel" for="foodName">Food Name</label>
-                        <input class="formInput" type="text" id="foodName" name="foodName" value="<?= $row['FoodName']?>"> 
-                    </div>
+    <input type="hidden" id="foodID" name="foodID" value="<?= $row['FoodID']?>">
 
+    <div class="formField foodNameField">
+        <label class="formLabel foodNameLabel" for="foodName">Food Name</label>
+        <input class="formInput foodNameInput" type="text" id="foodName" name="foodName" value="<?= $row['FoodName']?>"> 
+    </div>
 
-                    <div class="foodFormField">
-                        <label class="formLabel" for="foodCategory">Food Category</label>
-                        <select class="formInput" name="foodCategory">
+    <div class="formField foodCategoryField">
+        <label class="formLabel foodCategoryLabel" for="foodCategory">Food Category</label>
+        <select class="formInput foodCategoryInput" name="foodCategory">
                             <?php
                                 while($catRow = $catResult -> fetch_assoc()){
                                     if($catRow["CategoryID"] == $row["CategoryID"]){
@@ -63,15 +60,14 @@
                     </div>
                     
 
-                    <div class="foodFormField">
-                        <label class="formLabel" for="foodPrice">Price</label>
-                        <input class="formInput" type="number" step="0.01" name="foodPrice" value="<?= $row['Price'] ?>">
-                    </div>
+                    <div class="formField foodPriceField">
+            <label class="formLabel foodPriceLabel" for="foodPrice">Price</label>
+            <input class="formInput foodPriceInput" type="number" step="0.01" name="foodPrice" value="<?= $row['Price'] ?>">
+        </div>
 
-
-                    <div class="foodFormField">
-                        <label class="formLabel" for="foodAvailability">Availability</label>
-                        <select class="formInput" name="foodAvailability">
+        <div class="formField foodAvailabilityField">
+            <label class="formLabel foodAvailabilityLabel" for="foodAvailability">Availability</label>
+            <select class="formInput foodAvailabilityInput" name="foodAvailability">
                             <?php
                                 if($row['Availability'] == 'Available'){
                                     echo "<option value='Available' selected>Available</option>";
@@ -86,25 +82,27 @@
                     </div>
 
 
-                    <div class="foodFormField">
-                        <label class="formLabel" for="foodDescription">Description</label>
-                        <input class="formInput" type="text" name="foodDescription" value="<?= $row['Description'] ?>">
+                    <div class="formField foodDescriptionField">
+                        <label class="formLabel foodDescriptionLabel" for="foodDescription">Description</label>
+                        <input class="formInput foodDescriptionInput" type="text" name="foodDescription" value="<?= $row['Description'] ?>">
                     </div>
-                    
-                    <div>
+
+                    <div class="currentPic">
                         <h4>Current Pic</h4>
-                        <?= "<img src='data:image/jpeg;base64,".base64_encode($row['FoodPic'])."' width='100' height ='100'/>"; ?>
+                        <?= "<img class='currentPicImage' src='data:image/jpeg;base64,".base64_encode($row['FoodPic'])."' width='100' height ='100'/>"; ?>
                     </div>
 
-                    <div class="foodFormField">
-                        <label class="formLabel" for="foodPic">Replace Pic</label>
-                        <input class="formInput" type="file" name="foodPic">
+                    <div class="formField foodPicField">
+                        <label class="formLabel foodPicLabel" for="foodPic">Replace Pic</label>
+                        <input class="formInput foodPicInput" type="file" name="foodPic">
                     </div>
 
-                    <div class="foodFormButton">
-                        <input class="formButton" type="submit" name="modifyFoodSubmitButton" value="Save Changes">
+                    <div class="formButtonContainer">
+                        <input class="formButton saveChangesButton" type="submit" name="modifyFoodSubmitButton" value="Save Changes">
                     </div>
             </form>
+
+            <div class="foodModifyError">
 
             <?php
                 if($_SESSION["foodModifyError"] == 'imageTypeError'){
@@ -113,10 +111,17 @@
                 }
 
                 else if($_SESSION["foodModifyError"] == 'None'){
-                    echo "<h3 style='color:green'>Food modified successfully</h3>";
+                    echo "<script>alert('Food modified successfully');</script>";
                     $_SESSION["foodModifyError"] = 'null';
                 }
-            ?>                           
+            ?>  
+            <div class='backButtonContainer'><button onclick='goBack()'>Go Back</button></div>
+
+            <script>
+            function goBack() {
+            window.history.back();
+            }
+            </script>                         
 
         </div>
 

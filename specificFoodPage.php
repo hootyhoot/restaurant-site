@@ -9,12 +9,12 @@
 </head>
 
 
-<body>
+<body background="foodcategory.jpg">
 
     <?php 
         session_start(); 
         include "navigationPanel.php";
-        define("FOOD_IMAGE_SIZE", 400);
+       //define("FOOD_IMAGE_SIZE", 400);
         define("FOOD_ID", $_GET["foodID"]);
     ?>
 
@@ -38,8 +38,11 @@
             echo "<div class='foodTableContainer'>";
                 echo "<table>";
                     echo "<tr>";
-                        echo "<td> <img src='data:image/jpeg;base64," . base64_encode($row[3]) . "' width=' ". FOOD_IMAGE_SIZE
-                                    . "' height ='" . FOOD_IMAGE_SIZE . "'/> </td>";
+                
+                 //new code
+                    echo "<div class='centerImage'>";
+                    echo "<img src='data:image/jpeg;base64," . base64_encode($row[3]) . "'/>";
+                    echo "</div>";
                         
                         echo "<td> <div class='foodInfoContainer'>";
                             
@@ -55,7 +58,11 @@
                                     echo "<input type='hidden' name='foodID' value='" . FOOD_ID . "'>";
                                     echo "<label for 'quantity'>Quantity: </label>";
                                         echo "<input type='number' name='quantity' value='1' min='1'>";
-                                    echo "<input type='submit' value='Add to Cart'>";
+                                        //new
+                                        echo "<div class='buttonContainer'>";
+                                        echo "<input type='submit' value='Add to Cart'>";
+                                        echo "</div>";
+                                        
                                 echo "</form>";
                             }
                             else{
@@ -64,7 +71,7 @@
 
 
                             if(isset($_SESSION["addedToCart"])){
-                                echo "<h3 style='color: green'>Item added to cart successfully</h3>";
+                                echo "<script type='text/javascript'>alert('Item added to cart successfully');</script>";
                                 unset($_SESSION["addedToCart"]);
                             }
 

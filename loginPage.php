@@ -7,7 +7,8 @@
 
 </head>
 
-<body style="background-color: black;">
+<body class="loginPage">
+
     <?php session_start(); ?>
     
     <div class="Login">

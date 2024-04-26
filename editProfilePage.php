@@ -30,42 +30,43 @@
     ?>
 
 
-    <div><h1>Profile</h1></div>
+    <div class="profileTitle"><h1>Profile</h1></div>
 
-    <form action="updateProfileFunction.php" method ="post">
+    <form class="profileForm" action="updateProfileFunction.php" method ="post">
 
-        <div class="formField">
-            <label class="formLabel" for="firstnName">First Name</label>
-            <input class="formInput" type="text" id="firstName" name="firstName" value="<?php echo $row['FirstName']?>">
+        <div class="formField firstNameField">
+            <label class="formLabel firstNameLabel" for="firstName">First Name</label>
+            <input class="formInput firstNameInput" type="text" id="firstName" name="firstName" value="<?php echo $row['FirstName']?>">
         </div>
 
-        <div class="formField">
-            <label class="formLabel" for="lastName">Last Name</label>
-            <input class="formInput" type="text" id="lastName" name="lastName" value="<?php echo $row['LastName']?>">
+        <div class="formField lastNameField">
+            <label class="formLabel lastNameLabel" for="lastName">Last Name</label>
+            <input class="formInput lastNameInput" type="text" id="lastName" name="lastName" value="<?php echo $row['LastName']?>">
         </div>
 
-        <div class="formField">
-            <label class="formLabel" for="email">Email</label>
-            <input class="formInput" type="email" id="email" name="email" value="<?php echo $row['Email'] ?>">
+        <div class="formField emailField">
+            <label class="formLabel emailLabel" for="email">Email</label>
+            <input class="formInput emailInput" type="email" id="email" name="email" value="<?php echo $row['Email'] ?>">
         </div>
 
-        <div class="formField">
-            <label class="formLabel" for="username">Username</label>
-            <input class="formInput" type="text" id="name" name="username" value="<?php echo $row['Username']?>" disabled>
+        <div class="formField usernameField">
+            <label class="formLabel usernameLabel" for="username">Username</label>
+            <input class="formInput usernameInput" type="text" id="username" name="username" value="<?php echo $row['Username']?>" disabled>
         </div>
 
-        <div class="formField">
-            <label class="formLabel" for="password">Password</label>
-            <input class="formInput" type="password" id="password" name="password" value="<?php echo $row['Password']?>">
+        <div class="formField passwordField">
+            <label class="formLabel passwordLabel" for="password">Password</label>
+            <input class="formInput passwordInput" type="password" id="password" name="password" value="<?php echo $row['Password']?>">
         </div>
 
-        <div class="formField">
-            <label class="formLabel" for="contactNum">Contact Number</label>
-            <input class="formInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="11" placeholder="without '-'" value="<?php echo $row['ContactNo']?>">
+        <div class="formField contactNumField">
+            <label class="formLabel contactNumLabel" for="contactNum">Contact Number</label>
+            <input class="formInput contactNumInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="11" placeholder="without '-'" value="<?php echo $row['ContactNo']?>">
         </div>
 
-        <input class="formButton" type="submit" value="Save Changes">
+        <input class="formButton saveChangesButton" type="submit" value="Save Changes">
         
+
 
     </form>
         
@@ -73,7 +74,7 @@
     <?php
 
         if($_SESSION["updateProfileError"] == "None"){
-            echo "<h3 style='color:green'>Profile updated successfully</h3>";
+            echo "<script>alert('Profile updated successfully');</script>";
             $_SESSION["updateProfileError"] = "null";
         }
 

@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body style ="background-color:#D4D4D4  ;">
 
         <?php 
             session_start(); 
@@ -103,14 +103,14 @@
                     
                     <div class="tableHeader">
                         <tr>
-                            <th>FoodID</th>
-                            <th>Food Name</th>
-                            <th>Price</th>
-                            <th>Availability</th>
-                            <th>Food Picture</th>
-                            <th>Description</th>
-                            <th>Category Name</th>
-                            <th>Modify</th>
+                            <th class='foodRecordHeader'>FoodID</th>
+                            <th class='foodRecordHeader'>Food Name</th>
+                            <th class='foodRecordHeader'>Price</th>
+                            <th class='foodRecordHeader'>Availability</th>
+                            <th class='foodRecordHeader'>Food Picture</th>
+                            <th class='foodRecordHeader'>Description</th>
+                            <th class='foodRecordHeader'>Category Name</th>
+                            <th></th>
                         </tr>
                     </div>
 
@@ -129,19 +129,19 @@
                         if($result = $conn->query("SELECT Food.*, Category.CategoryName FROM Food INNER JOIN Category ON Food.CategoryID = Category.CategoryID ORDER BY Food.CategoryID ASC")){                      
 
                             while ($row = $result ->fetch_row()){
-
+                                //make subclass name for this one.
                                 echo"<tr>";
-                                echo"<td>"; echo $row[0]; echo"</td>";
-                                echo"<td>"; echo $row[1]; echo"</td>";
-                                echo"<td>"; echo $row[2]; echo"</td>";
-                                echo "<td>"; echo $row[3]; echo "</td>";
+                                echo"<td class='foodRecordCell'>"; echo $row[0]; echo"</td>";
+                                echo"<td class='foodRecordCell'>"; echo $row[1]; echo"</td>";
+                                echo"<td class='foodRecordCell'>"; echo $row[2]; echo"</td>";
+                                echo "<td class='foodRecordCell'>"; echo $row[3]; echo "</td>";
                                 
                                 echo"<div class='foodImage'>";
-                                    echo"<td>"; echo "<img src='data:image/jpeg;base64,".base64_encode($row[4])."' width='100' height ='100'/>"; echo"</td>";
+                                    echo"<td class='foodRecordCell'>"; echo "<img src='data:image/jpeg;base64,".base64_encode($row[4])."' width='100' height ='100'/>"; echo"</td>";
                                 echo"</div>";
 
-                                echo"<td style='font-size: 12px;'>"; echo $row[5]; echo"</td>";
-                                echo "<td>"; echo $row[7]; echo "</td>";
+                                echo"<td class='foodRecordCell' style='font-size: 12px;'>"; echo $row[5]; echo"</td>";
+                                echo "<td class='foodRecordCell'>"; echo $row[7]; echo "</td>";
 
                                 
                                 
