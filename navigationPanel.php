@@ -32,7 +32,7 @@
     <a class="rightAlign" href="orderPage.php">Orders</a>
 
     <!--Cart button -->
-    <a class="rightAlign" href="cartPage.php"><img src="CartIcon3.png" alt="Cart"></a>
+    <a class="rightAlign" href="cartPage.php"><img src="icons/CartIcon3.png" alt="Cart"></a>
 
 
 </div>

@@ -39,11 +39,11 @@
             
             
             
-            echo "<h1 class='paymentTitle'>Pay by <img src='TngIcon.svg' alt='Touch n Go Icon' class='paymentIcon'></h1>";
+            echo "<h1 class='paymentTitle'>Pay by <img src='icons/TngIcon.svg' alt='Touch n Go Icon' class='paymentIcon'></h1>";
             
 
 
-            echo "<img class='paymentImage' src='Tngpayment.jpeg' width='250' height='250'>";
+            echo "<img class='paymentImage' src='icons/Tngpayment.jpeg' width='250' height='250'>";
             echo "<a class='paymentNextLink' href='paymentVerify.php'>Next</a>";
         }
     ?>

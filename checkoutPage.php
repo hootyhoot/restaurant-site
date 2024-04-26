@@ -132,9 +132,9 @@
                     <!--field for user to select payment option-->
                     <label class="paymentMethodLabel" for="paymentMethod"></label>
                     <input class="paymentMethodInput" type="radio" id="paymentMethod" name="paymentMethod" value="CreditCard" checked>
-                    <img src="creditcardicon.png" alt="Credit Card Icon" class="paymentMethodIcon"> Credit Card
+                    <img src="icons/creditcardicon.png" alt="Credit Card Icon" class="paymentMethodIcon"> Credit Card
                     <input class="paymentMethodInput" type="radio" id="paymentMethod" name="paymentMethod" value="TouchNGo">
-                    <img src="Tngicon.svg" alt="Touch 'n Go Icon" class="paymentMethodIcon"> Touch 'n Go
+                    <img src="icons/Tngicon.svg" alt="Touch 'n Go Icon" class="paymentMethodIcon"> Touch 'n Go
                 </div>
                 
                 <!--submit button for checkout form-->

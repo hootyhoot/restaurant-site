@@ -1,5 +1,5 @@
 
-<img src="CreditCardLogos.jpg" alt="Credit Card Logos" class="credit-card-logos">
+<img src="icons/CreditCardLogos.jpg" alt="Credit Card Logos" class="credit-card-logos">
 
 <form name="paymentForm" class="payment-form" action="paymentVerify.php" method="post">
         
