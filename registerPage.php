@@ -64,20 +64,13 @@
                     <input class="formInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="10" pattern="[0-9]{10}" title="0121112222" placeholder="without '-'">
                 </div>
 
+                <!--division for the news and promotion field-->
                 <div class="formField newsAndPromotionsField">
                     <input type="checkbox" id="newsAndPromotions">
                     <label for="newsAndPromotions">I want the latest news and promotions!</label>
                 </div>
 
-                <div class="formField termsAndConditionsField">
-                    <input type="checkbox" id="termsAndConditions">
-                    <label for="termsAndConditions">I accept terms and conditions</label>
-                </div>
-
-               
-                    <input type="checkbox" id="newsAndPromotions">
-                    <label for="newsAndPromotions">I want the latest news and promotions!</label>
-                </div>
+                <!--division for the terms and conditions field-->
 
                 <div class="formField termsAndConditionsField">
                     <input type="checkbox" id="termsAndConditions">
@@ -85,10 +78,10 @@
                 </div>
 
                 <!--submit button for the registration form-, form inputs will be sent to registerVerify.php for validation-->
-                <input class="formButton" type="submit" value="Register Now">
+                <input class="formButton2" type="submit" value="Register Now">
 
                 <!--button that will link back to the login page-->
-                <a class="registerButton" href="loginPage.php">Back to Login</a>
+                <a class="registerButton2" href="loginPage.php">Back to Login</a>
 
 
             </form>
