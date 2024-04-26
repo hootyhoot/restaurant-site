@@ -1065,6 +1065,7 @@ input[name="checkoutSubmitButton"]:hover {
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-bottom: 8%;
 }
 
 .form-group-cardholderName, .form-group-cardNumber, .form-group-expiryDate, .form-group-cvc {
