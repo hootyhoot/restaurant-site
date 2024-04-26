@@ -44,6 +44,18 @@
         header("Location: addFoodPage.php");
     }
 
+    //if the price input is not numeric, set the 'foodUploadError' session variable and redirect to addFoodPage.php
+    else if(!is_numeric($formFoodPrice)){
+        $_SESSION["foodUploadError"] = "priceError";
+        header("Location: addFoodPage.php");
+    }
+
+    //if any fields are empty, set the 'foodUploadError' session variable and redirect to addFoodPage.php
+    else if($formFoodName == "" || $formFoodDescription == "" || $formFoodPrice == ""){
+        $_SESSION["foodUploadError"] = "emptyFields";
+        header("Location: addFoodPage.php");
+    }
+
     //if validation passed with no errors, insert the new food item into the database
     //then redirect back to addFoodPage.php
     else{

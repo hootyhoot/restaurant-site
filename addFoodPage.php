@@ -111,6 +111,18 @@
                     $_SESSION["foodUploadError"] = 'null';
                 }
 
+                //display error message if price input is invalid
+                else if($_SESSION["foodUploadError"] == 'priceError'){
+                    echo "<h3 style='color:red'>Invalid price input</h3>";
+                    $_SESSION["foodUploadError"] = 'null';
+                }
+
+                //display error message if any fields are left empty
+                else if($_SESSION["foodUploadError"] == 'emptyFields'){
+                    echo "<h3 style='color:red'>Please do not leave any fields empty</h3>";
+                    $_SESSION["foodUploadError"] = 'null';
+                }
+
                 //display message if food is successfully added
                 else if($_SESSION["foodUploadError"] == 'None'){
                     echo "<h3 style='color:green'>Food added successfully</h3>";
