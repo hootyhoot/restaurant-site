@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body style ="background-color:#D4D4D4  ;">
+<body>
 
     <?php 
         session_start();

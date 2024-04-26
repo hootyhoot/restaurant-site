@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body style= "background-color :#EDE2E0   ;" >
+<body>
 
 
 
@@ -68,7 +68,7 @@
                     echo "<td class='itemQuantity' style='text-align:center'><input type='number' id='" . $row["FoodID"] . "' name='quantity' value='" . $row['Quantity'] . "' min='1'>" . "</td>";
                     echo "<td class='itemSubtotal' style='text-align:right'>" . number_format($foodRow["Price"] * $row["Quantity"],2) . "</td>";
                     
-                    echo "<td class='itemRemove'> <a href='deleteFromCartFunction.php?FoodID=" . $row["FoodID"] . "'><img src='bin.png' alt='Remove'></a> </td>";
+                    echo "<td class='itemRemove'> <a href='deleteFromCartFunction.php?FoodID=" . $row["FoodID"] . "'><img src='icons/bin.png' alt='Remove'></a> </td>";
                     
                 echo "</tr>";
                     
