@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="registerpage">
+
+    
+    <div class="Login">
+
+    <h2 class="registrationHeader">REGISTRATION</h2>
+
+
+        <div class="loginForm">
+
+            <form action="registerVerify.php" method ="post">
+
+                <div class="formField">
+                    <label class="formLabel" for="firstnName">First Name</label>
+                    <input class="formInput" type="text" id="firstName" name="firstName">
+                </div>
+
+                <div class="formField">
+                    <label class="formLabel" for="lastName">Last Name</label>
+                    <input class="formInput" type="text" id="lastName" name="lastName">
+                </div>
+
+                <div class="formField">
+                    <label class="formLabel" for="email">Email</label>
+                    <input class="formInput" type="email" id="email" name="email">
+                </div>
+
+                <div class="formField">
+                    <label class="formLabel" for="username">Username</label>
+                    <input class="formInput" type="text" id="name" name="username">
+                </div>
+
+                <div class="formField">
+                    <label class="formLabel" for="password">Password</label>
+                    <input class="formInput" type="password" id="password" name="password">
+                </div>
+
+                <div class="formField">
+                    <label class="formLabel" for="confirmPass">Confirm Password</label>
+                    <input class="formInput" type="password" id="confirmPass" name="confirmPassword">
+                </div>
+
+                <div class="formField">
+                    <label class="formLabel" for="contactNum">Contact Number</label>
+                    <input class="formInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="10" pattern="[0-9]{10}" title="0121112222" placeholder="without '-'">
+                </div>
+
+                <input class="formButton" type="submit" value="Register Now">
+
+                <a class="registerButton" href="loginPage.php">Back to Login</a>
+
+
+            </form>
+
+            
+        </div>
+
+    </div>
+    
+    
+    
+</body>
+</html>
