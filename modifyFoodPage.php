@@ -126,8 +126,18 @@
                     <!--form field to replace the food picture-->
                     <div class="formField foodPicField">
                         <label class="formLabel foodPicLabel" for="foodPic">Replace Pic</label>
-                        <input class="formInput foodPicInput" type="file" name="foodPic">
+                        <input class="formInput foodPicInput" type="file" name="foodPic" id="foodPic" accept=".jpg" onchange="checkFileSize(event)">
                     </div>
+
+                    <script>
+                    function checkFileSize(event) {
+                        var file = event.target.files[0];
+                        if (file.size > 1048576) { // file size in bytes, 1MB = 1048576 bytes
+                            alert("File is too big! Please select a file less than 1MB.");
+                            event.target.value = ""; // clear the input
+                        }
+                    }
+                    </script>
 
                     <!--form button to submit the form-->
                     <!--form buttons to submit the form and go back-->

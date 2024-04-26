@@ -861,6 +861,7 @@ body {
 .formBackButton {
     text-align: center; /* center the button */
     margin-top: 20px; /* add some space above the button */
+    font-size: 12px;
 }
 
 .goBackButton {
@@ -1084,7 +1085,7 @@ input[name="checkoutSubmitButton"]:hover {
     border-radius: 5px;
 }
 .form-input-expiryMonth {
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .form-submit-paymentSubmitButton {
@@ -1110,7 +1111,7 @@ input[name="checkoutSubmitButton"]:hover {
 
 .credit-card-logos {
     display: block;
-    max-width: 100%; /* reduced from 50% */
+    max-width: 150%; /* reduced from 50% */
     width: 350px;
     height: 195px; /* reduced from 30% */
     margin: 0 auto 20px;

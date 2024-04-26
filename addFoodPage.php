@@ -83,8 +83,18 @@
                     <!--label and file upload field for food picture-->
                     <div class="foodFormField">
                         <label class="formLabel" for="foodPic">Add Pic</label>
-                        <input class="formInput" type="file" name="foodPic">
+                        <input class="formInput" type="file" name="foodPic" id="foodPic" accept=".jpg" onchange="checkFileSize(event)">
                     </div>
+
+                    <script>
+                    function checkFileSize(event) {
+                        var file = event.target.files[0];
+                        if (file.size > 1048576) { // file size in bytes, 1MB = 1048576 bytes
+                            alert("File is too big! Please select a file less than 1MB.");
+                            event.target.value = ""; // clear the input
+                        }
+                    }
+                    </script>
 
 
                     <!--submit button to add food into the menu-->
