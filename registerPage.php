@@ -78,10 +78,10 @@
                 </div>
 
                 <!--submit button for the registration form-, form inputs will be sent to registerVerify.php for validation-->
-                <input class="formButton2" type="submit" value="Register Now">
+                <input class="formButton" type="submit" value="Register Now">
 
                 <!--button that will link back to the login page-->
-                <a class="registerButton2" href="loginPage.php">Back to Login</a>
+                <a class="registerButton" href="loginPage.php">Back to Login</a>
 
 
             </form>

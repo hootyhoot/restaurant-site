@@ -131,12 +131,7 @@
 .newsAndPromotionsField input[type="checkbox"], .termsAndConditionsField input[type="checkbox"] {
     transform: scale(2.0); /* Makes the checkbox larger */
 }
-.formButton2:hover, .registerButton2:hover {
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+
 
 
 /*--------------------------------------------*/
