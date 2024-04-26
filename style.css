@@ -101,10 +101,6 @@
 /* For registerPage */
 
 .registerpage {
-    background-image: url('registerpage1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
     .registrationHeader {
     
             font-family: 'Roboto', sans-serif;
