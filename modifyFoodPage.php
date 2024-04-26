@@ -54,22 +54,18 @@
 <form class="modifyFoodForm" name="modifyFoodForm" action="modifyFoodFunction.php" method="post" enctype="multipart/form-data">
 
     <input type="hidden" id="foodID" name="foodID" value="<?= $row['FoodID']?>">
-
-    <div class="formField foodNameField">
-        <label class="formLabel foodNameLabel" for="foodName">Food Name</label>
-        <input class="formInput foodNameInput" type="text" id="foodName" name="foodName" value="<?= $row['FoodName']?>"> 
-    </div>
+            <!--form field for food name-->
+                    <div class="formField foodNameField">
+                        <label class="formLabel foodNameLabel" for="foodName">Food Name</label>
+                        <input class="formInput foodNameInput" type="text" id="foodName" name="foodName" value="<?= $row['FoodName']?>"> 
+                    </div>
                     <!--hidden input field to store the FoodID of the selected food item-->
                     <!--to be passed to next page for validation-->
                     <div>
                         <input type="hidden" id="foodID" name="foodID" value="<?= $row['FoodID']?>">
                     </div>
 
-                    <!--form field for food name-->
-                    <div class="foodFormField">
-                        <label class="formLabel" for="foodName">Food Name</label>
-                        <input class="formInput" type="text" id="foodName" name="foodName" value="<?= $row['FoodName']?>"> 
-                    </div>
+                   
 
                     <!--form field for food category-->    <div class="formField foodCategoryField">
         <label class="formLabel foodCategoryLabel" for="foodCategory">Food Category</label>
@@ -134,8 +130,14 @@
                     </div>
 
                     <!--form button to submit the form-->
+                    <!--form buttons to submit the form and go back-->
                     <div class="formButtonContainer">
                         <input class="formButton saveChangesButton" type="submit" name="modifyFoodSubmitButton" value="Save Changes">
+                        
+                    </div>
+
+                    <div class="formBackButton">
+                        <a class="formButton goBackButton" href='addFoodPage.php'>Go Back</a>
                     </div>
             </form>
 
@@ -154,14 +156,7 @@
                     echo "<script>alert('Food modified successfully');</script>";
                     $_SESSION["foodModifyError"] = 'null';
                 }
-            ?>  
-            <div class='backButtonContainer'><button onclick='goBack()'>Go Back</button></div>
-
-            <script>
-            function goBack() {
-            window.history.back();
-            }
-            </script>                         
+            ?>                 
 
         </div>
 
