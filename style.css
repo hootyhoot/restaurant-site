@@ -496,12 +496,12 @@ body {
 }
 
 .foodInfoContainer h1 {
-    color: white;
+    color: black;
     font-size: 24px;
 }
 
 .foodInfoContainer p {
-    color: white;
+    color: black;
     font-size: 16px;
 }
 
@@ -510,7 +510,7 @@ body {
 }
 
 .foodInfoContainer label {
-    color: white;
+    color: black;
 }
 
 .foodInfoContainer input[type="submit"] {
