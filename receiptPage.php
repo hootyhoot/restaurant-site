@@ -25,6 +25,7 @@
     
     <?php 
     
+        //load up session variables to be used globally
         session_start(); 
 
         //condition check to see if user is properly logged in
@@ -32,6 +33,7 @@
             header("Location: loginPage.php");
         }
 
+        //include the navigation panel
         include "navigationPanel.php";
 
         // Assuming the purchase details are stored in the session
