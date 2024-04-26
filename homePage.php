@@ -17,8 +17,8 @@ body {
 }
 
 .container {
-    max-width: 1200px; /* Increased container width by 50% */
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 50px auto 0; /* Added top margin of 40px */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -40,7 +40,7 @@ body {
     margin-top: 20px;
     font-size: 36px;
     font-weight: 500;
-    color: #f5f5dc;
+    color: #f5f5dc; /* Off-white color for the "Weng's Mama's" text */
 }
 
 #about-us {
