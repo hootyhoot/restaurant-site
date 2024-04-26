@@ -63,7 +63,7 @@
         <!--input field for email-->
         <div class="formField emailField">
             <label class="formLabel emailLabel" for="email">Email</label>
-            <input class="formInput emailInput" type="email" id="email" name="email" value="<?php echo $row['Email'] ?>">
+            <input class="formInput emailInput" type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="<?php echo $row['Email'] ?>">
         </div>
 
         <!--input field for username-->

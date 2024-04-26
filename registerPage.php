@@ -37,7 +37,7 @@
                 <!--division for the email field-->
                 <div class="formField">
                     <label class="formLabel" for="email">Email</label>
-                    <input class="formInput" type="email" id="email" name="email">
+                    <input class="formInput" type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 </div>
 
                 <!--division for the username field-->
