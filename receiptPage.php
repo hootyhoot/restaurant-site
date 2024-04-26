@@ -6,6 +6,16 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+<style>
+        body {
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+
 <body>
     
     <?php 
@@ -13,7 +23,8 @@
         include "navigationPanel.php";
     ?>
 
-    <h1>Receipt</h1>
+    <h1>Order received!</h1>
+    <img src="icons/delivery-bike.png" alt="Image of delivery bike">
 
 
 </body>

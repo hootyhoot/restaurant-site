@@ -19,19 +19,20 @@
             <h1>Weng's Mama's</h1>
     </div>
     
-    <section id="about-us">
+    <section id="about-us" style="text-align: center;">
         <h2>About Us</h2>
-        <p></p>
+        <p>Weng's Mama's celebrates the harmonious fusion of Malay and Chinese cuisines, born from Weng's profound love for his mother's cooking. Her home-cooked meals blending bold Malay spices with Chinese techniques blossomed into this cozy restaurant. Each bite connects cultures, showcasing food's power to unite. Join us on this delectable cross-cultural journey honoring Weng's culinary heritage.</p>
     </section>
 
-    <footer>
+    <footer style="text-align: center;">
         <h2>Follow us on social media</h2>
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="instagram-icon.png" alt="Instagram Icon" width="50" height="50">
-        </a>
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="facebook-icon.png" alt="Facebook Icon" width="50" height="50">
-        </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="icons/instagram-icon.png" alt="Instagram Icon" width="50" height="50">
+            </a>
+
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="icons/facebook-icon.png" alt="Facebook Icon" width="50" height="50">
+            </a>
     </footer>
     
   
