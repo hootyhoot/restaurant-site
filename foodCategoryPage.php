@@ -7,6 +7,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
+<style>
+    .foodContainer {
+        background-color: rgba(192, 192, 192, 0.5);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .foodContainer a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .foodContainer a h3 {
+        color: black;
+    }
+</style>
 
 <body>
 
