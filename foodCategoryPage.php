@@ -41,7 +41,7 @@
 
 </style>
 
-<body background="foodcategory.jpg">
+<body>
 
     <?php
         //load up session variables to be used globally

@@ -6,8 +6,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-  <!-- <body style ="background-color:#D4D4D4  ;"> -->
-  <body style="background: url('Cartpage.jpg');">
+  <style>
+    .noOrders {
+        text-align: center;
+    }
+  </style>
+
+  <body>
 
     
 
@@ -73,7 +78,7 @@
 
             }
             else{
-                echo "<h2>You have not made any orders.</h2>";
+                echo "<div class='noOrders'><h2>You have not made any orders.</h2></div>";
             }
 
 

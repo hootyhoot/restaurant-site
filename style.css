@@ -97,11 +97,6 @@
     }
 }
 
-.loginPage {
-    background-image: url('background.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 
 
@@ -404,7 +399,6 @@ body {
 }
 
 .foodContainer {
-<<<<<<< HEAD
     background-color: whitesmoke; /* Light grey color */
     padding: 20px;
     border-radius: 10px; /* Increase border radius for a more rounded look */
@@ -414,12 +408,6 @@ body {
 
 .foodContainer:hover {
     box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.2); /* Increase blur radius, Y-offset, and opacity on hover for a lifting effect */
-=======
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
->>>>>>> 9782c66fac8e64a6fbace5f90879def893eadb2e
 }
 
 .foodContainer img {
