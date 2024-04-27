@@ -25,43 +25,43 @@
                 <!--division for the first name field-->
                 <div class="formField">
                     <label class="formLabel" for="firstnName">First Name</label>
-                    <input class="formInput" type="text" id="firstName" name="firstName">
+                    <input class="formInput" type="text" id="firstName" name="firstName" required>
                 </div>
 
                 <!--division for the last name field-->
                 <div class="formField">
                     <label class="formLabel" for="lastName">Last Name</label>
-                    <input class="formInput" type="text" id="lastName" name="lastName">
+                    <input class="formInput" type="text" id="lastName" name="lastName" required>
                 </div>
 
                 <!--division for the email field-->
                 <div class="formField">
                     <label class="formLabel" for="email">Email</label>
-                    <input class="formInput" type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <input class="formInput" type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="google@gmail.com">
                 </div>
 
                 <!--division for the username field-->
                 <div class="formField">
                     <label class="formLabel" for="username">Username</label>
-                    <input class="formInput" type="text" id="name" name="username">
+                    <input class="formInput" type="text" id="name" name="username" required>
                 </div>
 
                 <!--division for the password field-->
                 <div class="formField">
                     <label class="formLabel" for="password">Password</label>
-                    <input class="formInput" type="password" id="password" name="password">
+                    <input class="formInput" type="password" id="password" name="password" required minlength="8" placeholder="minimum 8 character">
                 </div>
 
                 <!--division for the confirm password field-->
                 <div class="formField">
                     <label class="formLabel" for="confirmPass">Confirm Password</label>
-                    <input class="formInput" type="password" id="confirmPass" name="confirmPassword">
+                    <input class="formInput" type="password" id="confirmPass" name="confirmPassword" required minlength="8" placeholder="minimum 8 character">
                 </div>
 
                 <!--division for the contact number field-->
                 <div class="formField">
                     <label class="formLabel" for="contactNum">Contact Number</label>
-                    <input class="formInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="10" pattern="[0-9]{10}" title="0121112222" placeholder="without '-'">
+                    <input class="formInput" type="tel" id="contactNum" name="contactNum" minlength="10" maxlength="10" pattern="[0-9]{10}" title="0121112222" placeholder="without '-'" required>
                 </div>
 
                 <!--division for the news and promotion field-->
@@ -72,10 +72,12 @@
 
                 <!--division for the terms and conditions field-->
 
-                <div class="formField termsAndConditionsField">
-                    <input type="checkbox" id="termsAndConditions">
-                    <label for="termsAndConditions">I accept terms and conditions</label>
-                </div>
+                    <div class="formField termsAndConditionsField">
+                        <input type="checkbox" id="termsAndConditions" required>
+                        <label for="termsAndConditions">I accept terms and conditions</label>
+                    </div>
+
+                
 
                 <!--submit button for the registration form-, form inputs will be sent to registerVerify.php for validation-->
                 <input class="formButton" type="submit" value="Register Now">

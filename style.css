@@ -33,6 +33,7 @@
         margin: auto;
         width: 35%;
         padding: 25px;
+        border-radius: 10px;
 
     
         .formField{
