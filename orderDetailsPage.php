@@ -65,7 +65,7 @@
         //display the itemized food order
         echo "<table class='orderDetailsTable'>";
             //table header
-            echo "<tr>  <th>Item No.</th>   <th></th>   <th>Food Name</th> <th>Price</th>  <th>Quantity</th>    <th>Sub Total</th>   <th></th>   </tr>";
+            echo "<tr>  <th>Item No.</th>   <th></th>   <th>Food Name</th> <th>Price</th>  <th>Quantity</th>    <th>Sub Total</th>   </tr>";
             
             //loop through all the rows returned by the query
             while($row = $result -> fetch_assoc()){
