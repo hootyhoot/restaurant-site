@@ -12,6 +12,7 @@
         $expiryYear = $_POST["expiryYear"];
         $cvc = $_POST["cvc"];
         $currentMonth = date("m");
+        $currentYear = date("y");
 
         $_SESSION["paymentDetailsError"] = "None";
 
@@ -26,7 +27,7 @@
             header("Location: paymentPage.php");
         }
         //if expiry date is invalid, set paymentDetailsError and redirect to paymentPage.php
-        else if($_SESSION["paymentDetailsError"] == "None" && ($expiryYear < 24 || ($expiryMonth < 1 || $expiryMonth > 12) || ($expiryYear == 24 && $expiryMonth < $currentMonth) )){
+        else if($_SESSION["paymentDetailsError"] == "None" && (($expiryYear < $currentYear || $expiryYear > ($currentYear+5)) || ($expiryMonth < 1 || $expiryMonth > 12) || ($expiryYear == 24 && $expiryMonth < $currentMonth) )){
             $_SESSION["paymentDetailsError"] = "Invalid Expiry Date";
             header("Location: paymentPage.php");
         }
