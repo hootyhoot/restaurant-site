@@ -14,7 +14,7 @@
         <!--input field for card number-->
         <div class="form-group-cardNumber">
             <label for="cardNumber" class="form-label-cardNumber">Card Number</label>
-            <input type="text" id="cardNumber" name="cardNumber" class="form-input-cardNumber" minlength="16" maxlength="16" placeholder="Card Number i.e 3711 1111 1111 1142" required>
+            <input type="text" id="cardNumber" name="cardNumber" class="form-input-cardNumber" minlength="16" maxlength="16" pattern="\d{16}" title="Please enter a valid card number." placeholder="Card Number i.e 3711 1111 1111 1142" required>
         </div>
 
         <!--input fields for expiry date-->
