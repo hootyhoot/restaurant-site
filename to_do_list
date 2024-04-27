@@ -86,3 +86,45 @@ FINAL CHECKS TO DO BEFORE SUBMISSION
 13. Payment mockup
 
 14. VISUAL DESIGN FOLLOWS A CONSISTENT THEME
+
+
+
+VIDEO SHOWCASE
+
+-enter the webpage using http://localhost/restaurant-site/
+-also show that if you have not logged in before, accessing other pages like http://localhost/restaurant-site/homePage.php will redirect back to login
+
+LOGIN/REGISTER
+1. show login error
+2. show 2 registration form validation e.g. empty field, email format wrong, contact no. format wrong
+3. show registration successful
+4. show CUSTOMER login
+5. show admin login
+
+EDIT PROFILE
+6. show edit profile info function (with one form validation error)
+
+BROWSE FOOD / ADD FOOD / MODIFY FOOD
+7. show browse food by category function, click into a food, select quantity add to cart
+8. show Add Food to menu function, show food was added in the bottom Current Records AND have to go back to browse food to show food was successfully added (show some form validation error)
+9. show Modify Food function, go back to Add Food page to show food was successfully modified
+
+CART
+10. show Cart Page, show that updating the quantity dynamically updates cart
+11. totally delete item from cart
+12. add back few more new food items into cart
+
+CHECKOUT / PAYMENT
+13. show checkout page (show form validation error for shipping details)
+14. highlight that at the bottom of the page, order summary with Total is shown
+15. demonstrate credit card payment option (with a form validation error)
+16. show 'Continue' button in receipt page
+
+RECEIPT
+17. repeat payment with TnG
+
+ORDERS
+18. show Orders page
+19. show details of an order by clicking into a row
+
+20. Logout
