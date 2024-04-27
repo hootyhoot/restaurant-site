@@ -41,7 +41,7 @@
                     <!--label and input field for food name-->
                     <div class="foodFormField">
                         <label class="formLabel" for="foodName">Food Name</label>
-                        <input class="formInput" type="text" id="foodName" name="foodName" placeholder="Enter name of food"> 
+                        <input class="formInput" type="text" id="foodName" name="foodName" placeholder="Enter name of food" required> 
                     </div>
 
                     
@@ -59,7 +59,7 @@
                     <!--label and input field for food price-->
                     <div class="foodFormField">
                         <label class="formLabel" for="foodPrice">Price</label>
-                        <input class="formInput" type="number" step="0.01" min='0.01' name="foodPrice" placeholder="Enter selling price">
+                        <input class="formInput" type="number" step="0.01" min='0.01' name="foodPrice" placeholder="Enter selling price" required>
                     </div>
 
 
@@ -76,14 +76,14 @@
                     <!--label and input field for food description-->
                     <div class="foodFormField">
                         <label class="formLabel" for="foodDescription">Description</label>
-                        <input class="formInput" type="text" name="foodDescription" placeholder="Enter description of food">
+                        <input class="formInput" type="text" name="foodDescription" placeholder="Enter description of food" required>
                     </div>
 
 
                     <!--label and file upload field for food picture-->
                     <div class="foodFormField">
                         <label class="formLabel" for="foodPic">Add Pic</label>
-                        <input class="formInput" type="file" name="foodPic" id="foodPic" accept=".jpg" onchange="checkFileSize(event)">
+                        <input class="formInput" type="file" name="foodPic" id="foodPic" accept=".jpg" onchange="checkFileSize(event)" required>
                     </div>
 
                     <script>
@@ -125,16 +125,12 @@
 
                 //display message if food is successfully added
                 else if($_SESSION["foodUploadError"] == 'None'){
-                    echo "<h3 style='color:green'>Food added successfully</h3>";
+                    echo "<script>alert('Food added successfully');</script>";
                     $_SESSION["foodUploadError"] = 'null';
                 }
             ?>                           
 
         </div>
-
-
-
-
 
         <!-----------Table to display all the current food records---------------------->
         <div class="currentFoodRecords">

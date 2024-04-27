@@ -173,7 +173,7 @@
                     }
 
                     else if($_SESSION["foodModifyError"] == 'emptyFields'){
-                        echo "<h3 style='color:red'>Please do not leave any fields empty</h3>";
+                        echo "<script>alert('Please do not leave any fields empty');</script>";
                         $_SESSION["foodModifyError"] = 'null';
                     }
 
