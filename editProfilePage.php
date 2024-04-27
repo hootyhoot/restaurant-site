@@ -102,13 +102,15 @@
 
         //display error message if the contact number format is invalid
         else if($_SESSION["updateProfileError"] == "Invalid Contact Number"){
-            echo "<h3 style='color:red'>Invalid Contact Number</h3>";
+            
+            echo "<script>alert('Invalid Contact Number');</script>";
+
             $_SESSION["updateProfileError"] = "null";
         }
 
         //display error message if any fields are left empty
         else if($_SESSION["updateProfileError"] == "Empty fields"){
-            echo "<h3 style='color:red'>Please do not leave any fields empty</h3>";
+            echo "<script>alert('Please do not leave any fields empty');</script>";
             $_SESSION["updateProfileError"] = "null";
         }
 
